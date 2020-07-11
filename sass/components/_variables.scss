@@ -1,0 +1,32 @@
+// Variables Globales
+$global-font: 'Roboto', sans-serif;
+$padding-size: 30px;
+$width-size: 120rem;
+$body-color: #fafafa;
+$title-color: #1d1d1f;
+$h1-fontSize: 60px;
+$h2-fontsize: $h1-fontSize - 10px;
+$h3-fontsize: 30px;
+$paragraph-color: #555;
+$linkCta-color: #bb0a36;
+$gradient-btn: linear-gradient(90deg, #fe7b11, #fe0e95);
+$footer-color: rgb(240, 240, 240);
+
+// Variables de la pagina Inicio
+$gradientArticle-1: linear-gradient(135deg, #e4127a 0%, #75018f 100%);
+$gradientArticle-2: linear-gradient(0deg, #190849 0%, #300877 100%);
+$gradientArticle-3: linear-gradient(0deg, #104fdc 0%, #01dbfe 100%);
+$gradientArticle-4: linear-gradient(45deg, #fbb23b 0%, #ec0d8a 100%);
+$colorParagraph-article: #8a8888;
+
+// Variables de la pagina Acerca de y Clientes
+$background-stack: #F2F2F2;
+
+// Variables de la pagina Manuales
+$gradientColor-jade: linear-gradient(90deg, #3ABEB1 , #299E90);
+$gradientColor-purple: linear-gradient(90deg, #7E4EB4 , #603894);
+$gradientColor-yellow: linear-gradient(90deg, #F0DD67 , #E6C84E);
+
+//Variables de la pagina de Contacto
+$gradientHero-contact: linear-gradient(135deg,#fe7b11 0%,#b80572 100%)!important;
+$colorBtn-submit: #ff306a;

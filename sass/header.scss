@@ -1,0 +1,258 @@
+// Importacion de Sass
+@import "components/variables";
+@import "components/button";
+
+html{
+    font-size: 10px;
+    font-family: $global-font;
+}
+body{
+    background: $body-color;
+}
+a{
+    display: block;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+// --------------ESTILOS DEL HEADER---------------//
+.header{
+    user-select: none;
+    width: 100%;
+    height: 75px;
+    background: rgba($color: #fff, $alpha: 0.75);
+    backdrop-filter: saturate(1.8) blur(20px);
+    position: fixed;
+	z-index: 1000;
+    top: 0;
+
+    // --------------ESTILOS DE LA NAVEGACION---------------//
+    .main-nav{
+        max-width: $width-size;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 $padding-size;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo{
+            width: 12rem;
+            user-select: none;
+        }
+
+        &__list{
+            width: 33rem;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item{
+            height: 100%;
+            &--hidden{
+                display: none;
+            }
+        }
+        &__link{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $paragraph-color;
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 300ms;
+            position: relative;
+            user-select: none;
+            padding: 0 1px;
+            &::after{
+                content: ""	;
+                position: absolute;
+                width: 0;
+                height: 2.5px;
+                background: $gradient-btn;
+                bottom: 0;
+                transition: all .3s;
+            }
+            &:hover{
+                color: #333;
+                &::after{
+                    transition: all .3s;
+                    width: 100%;
+                }
+            }
+        }
+        // --------------ESTILOS DEL BOTON---------------//
+        &__btn{
+            @include styleBtn;
+            &--hidden{
+                display: none;
+                margin: 0;
+                padding: 0;
+            }
+            &:hover{
+            @include styleBtn-hover;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// MEDIA QUERYS
+@media screen and (max-width: 1080px){
+    $padding-size: 20px;
+    $width-size: 90rem;
+
+    .header{
+        height: 6.5rem;
+
+        .main-nav{
+            max-width: $width-size;
+            padding: 0 $padding-size;
+            &__logo{
+                width: 10rem;
+            }
+            &__list{
+                width: 31rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    $padding-size: 15px;
+
+    .header{
+        height: 5.5rem;
+        transition: background ease-in-out .3s;
+
+        .main-nav{
+            padding: 0 $padding-size;
+            
+            &__list{
+                height: 0;
+                visibility: hidden;
+                position: fixed;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                width: 100%;
+                top: 100%;
+                background: #fff;
+                transition: all ease-in-out .4s;
+                overflow: hidden;
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: #ebebeb;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+            &__item{
+                height: 60px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &--hidden{
+                    height: auto;
+                    margin-top: 70px;
+                }
+            }
+            &__link{
+                font-size: 1.7rem;
+                &--large{
+                    display: none;
+                }
+            &::after{
+                bottom: 20%;
+            }
+            }
+        }
+
+        .mobile-menu{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .line{
+                position: absolute;
+                width: 2.5rem; 
+                height: 2px;
+                background: #000;
+                transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+                &-top{
+                    margin-top: 10px;
+                }
+                &-medium{
+                    margin-top: 2.5px;
+                }
+                &-bottom{
+                    margin-top: -.5rem;
+                }
+            }
+        }
+
+        &.active{
+            background: #fff;
+            .main-nav{
+                position: relative;
+                &__list{
+                    height: 100vh;
+                    opacity: 1;
+                    visibility: visible;
+                    padding-top: 50px;
+                }
+                &__item{
+                    animation-name: fadeIn;
+                    animation-duration: 1s;
+                    
+                }
+                @keyframes fadeIn {
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .line-top{
+                margin-top: 0;
+                transform: rotate(45deg);
+                transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+            }
+            .line-medium{
+                display: none;
+                transition: .1s;
+            }
+            .line-bottom{
+                margin-top: 0;
+                transform: rotate(-45deg);
+                transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+            }
+        }
+    }
+}

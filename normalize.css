@@ -1,0 +1,15 @@
+button{
+  font-family: inherit;
+}
+
+/* MIS ESTILOS */
+*,
+*::after,
+*::before{
+  outline: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
