@@ -2,3 +2,171 @@
 @import "components/variables";
 @import "components/button";
 
+.section-footer{
+    margin-top: 100px;
+    padding: 30px 0 15px;
+    background-color: $footer-color;
+
+    .footer{
+        max-width: $width-size;
+        margin: 0 auto;
+        padding: 0 $padding-size;
+        color: $title-color;
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: space-between;
+        }
+        &__title{
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: $title-color;
+        }
+        &-container-social__icons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .social-icon{
+                filter: grayscale(1);
+                transition: all .2s;
+                width: 35px;
+	            height: 35px;
+                &:hover{
+                    filter: none;
+                    transform: scale(1.1);
+                }
+                &__facebook{
+                    background: url('../img/footer/icon-facebook.svg');
+	                width: 30px;
+	                height: 30px;
+	                background-size: cover;
+                }
+                &__youtube{
+                    background: url('../img/footer/icon-youtube.svg');    
+	                background-size: cover;
+                }
+                &__whatsapp{
+                    background: url('../img/footer/icon-whatsapp.svg');
+	                background-size: cover;
+                }
+            }
+        }
+    }
+    .footer-container-nav{
+        a{
+            display: inline-block;
+        }
+        .footer-nav{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 15px;
+
+            &__item{
+                font-size: 14px;
+                font-weight: 400;
+            }
+            &__link{
+                color: #515154;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+    .footer-container-contacto{
+        .contacto-list{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(3, auto);
+            row-gap: 15px;
+            column-gap: 25px;
+            &__item{
+                font-size: 14px;
+                font-weight: 500;
+                color: #555555;
+            }
+            &__copy{
+                font-size: 14px;
+                color: #515154;
+            }
+            &__phone{
+                display: block;
+                margin-bottom: 8px;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .footer-copytight{
+        text-align: center;
+        font-size: 13px;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid $title-color;
+        color: #555555;
+    }
+}
+
+
+
+
+
+/*************** MEDIA QUERYS ****************/
+@media screen and (max-width: 1080px){
+    $padding-size: 20px;
+    $width-size: 90rem;
+
+    .section-footer{
+        .footer{
+            max-width: $width-size;
+            padding: 0 $padding-size;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    $padding-size: 15px;
+
+    .section-footer{
+        padding-bottom: 10px;
+
+        .footer{
+            max-width: 600px;
+
+            &__grid{
+                grid-template-columns: auto;
+                grid-template-rows: repeat(3, auto);
+                justify-content: center;
+                grid-gap: 30px;
+            }
+            &__title{
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            &-container-nav{
+                .footer-nav{
+                    grid-gap: 10px;
+                    text-align: center;
+                }
+            }
+            &-container-contacto{
+                .contacto-list{
+                    row-gap: 10px;
+                    column-gap: 20px;
+                    &__item{
+                        text-align: center;
+                    }
+                }
+            }
+            &-copytight{
+                margin-top: 20px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
