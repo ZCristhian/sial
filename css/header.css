@@ -183,19 +183,19 @@ a {
   }
   .header .mobile-menu .line {
     position: absolute;
-    width: 2.5rem;
+    width: 2.8rem;
     height: 2px;
     background: #000;
     transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   }
-  .header .mobile-menu .line-top {
-    margin-top: 10px;
+  .header .mobile-menu .line-bottom {
+    margin-top: 15px;
   }
   .header .mobile-menu .line-medium {
     margin-top: 2.5px;
   }
-  .header .mobile-menu .line-bottom {
-    margin-top: -0.5rem;
+  .header .mobile-menu .line-top {
+    margin-top: -1rem;
   }
   .header.active {
     background: #fff;

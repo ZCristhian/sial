@@ -198,18 +198,18 @@ a{
             cursor: pointer;
             .line{
                 position: absolute;
-                width: 2.5rem; 
+                width: 2.8rem; 
                 height: 2px;
                 background: #000;
                 transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-                &-top{
-                    margin-top: 10px;
+                &-bottom{
+                    margin-top: 15px;
                 }
                 &-medium{
                     margin-top: 2.5px;
                 }
-                &-bottom{
-                    margin-top: -.5rem;
+                &-top{
+                    margin-top: -1rem;
                 }
             }
         }
