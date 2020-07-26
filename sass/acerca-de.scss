@@ -1,0 +1,131 @@
+// Importacion de Css no de Sass
+@import url("header.css");
+@import url("footer.css");
+
+@import "components/variables";
+@import "components/button";
+
+// <!-------------- ESTILOS DEL HERO -------------->
+.main{
+    padding-top: 175px;
+    .about-hero{
+        max-width: $width-size;
+        margin: 0 auto;
+        padding: 0 $padding-size;
+        display: flex;
+        justify-content: space-between;
+
+        &__figure{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__image{
+            max-height: 320px;
+        }
+        &__wrapper{
+            margin-left: 30px;
+        }
+        &__title{
+            font-size: 6rem;
+            font-weight: 600;
+            padding-top: 20px;
+            margin-bottom: 12px;
+            color: $title-color;
+        }
+        &__subtitle{
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: $title-color;
+        }
+        &__copy{
+            font-weight: 400;
+            font-size: 1.7rem;
+            line-height: 1.4;
+            color: $paragraph-color;
+        }
+    }
+}
+
+
+
+// <!--------------------------------------- MEDIAQUERYS ------------------------------------->
+@media screen and (max-width: 1080px){
+    $padding-size: 20px;
+    $width-size: 90rem;
+
+// <!-------------- ESTILOS DEL HERO -------------->
+    .main{
+        padding-top: 135px;
+
+        .about-hero{
+            max-width: $width-size;
+            padding: 0 $padding-size;
+
+            &__image{
+                max-width: 490px;
+            }
+            &__title{
+                padding-top: 0;
+                font-size: 4.8rem;
+                margin-bottom: 8px;
+            }
+            &__subtitle{
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 870px){
+
+// <!-------------- ESTILOS DEL HERO -------------->
+    .main{
+        .about-hero{
+            max-width: 600px;
+            flex-direction: column;
+
+            &__image{
+                max-height: 280px;
+            }
+            &__wrapper{
+                margin: 20px 0 0;
+                text-align: center;
+                padding: 0 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    $padding-size: 15px;
+
+// <!-------------- ESTILOS DEL HERO -------------->
+    .main{
+        padding-top: 125px;
+
+        .about-hero{
+            padding: 0 $padding-size;
+        }
+    }
+}
+@media screen and (max-width: 560px){
+
+// <!-------------- ESTILOS DEL HERO -------------->
+    .main{
+        .about-hero{
+            &__figure{
+                width: 100%;
+            }
+            &__image{
+                width: 100%;
+                height: auto;
+                max-width: 500px;
+                max-height: initial;
+            }
+            &__wrapper{
+                padding: 0;
+            }
+        }
+    }
+}
