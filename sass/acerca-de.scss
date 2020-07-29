@@ -47,6 +47,89 @@
         }
     }
 }
+// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+.main{
+    .section-modules{
+        padding-top: 100px;
+
+        .container-modules{
+            background: $background-stack;
+            border-radius: 25px;
+            width: 95%;
+            max-width: $width-size;
+            margin: 0 auto;
+            padding: 50px 20px 20px;
+            
+            &__title{
+                margin-bottom: 40px;
+                font-size: 5rem;
+                text-align: center;
+                color: $title-color;
+            }
+            .modules{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(2, auto);
+                grid-gap: 40px;
+                grid-template-areas:
+                "abastecimiento abastecimiento almacen almacen combustible combustible"
+                "caja caja caja reportes reportes reportes";
+
+                &__item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px;
+
+                    &--abastecimiento{
+                        grid-area: abastecimiento;
+                    }
+                    &--almacen{
+                        grid-area: almacen;
+                    }
+                    &--combustible{
+                        grid-area: combustible;
+                    }
+                    &--caja{
+                        grid-area: caja;
+                    }
+                    &--reportes{
+                        grid-area: reportes;
+                    }
+                }
+
+                &__image{
+                    width: 200px;
+                    height: 200px;
+                }
+                &__title{
+                    font-size: 3rem;
+                    margin-top: 15px;
+                    text-align: center;
+                    color: $title-color;
+                    line-height: 1;
+                    height: 80px;
+                }
+                .feature-list{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 20px;
+
+                    .feature-item{
+                        max-width: 250px;
+                        font-size: 17px;
+                        color: $paragraph-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 
@@ -77,6 +160,33 @@
             }
         }
     }
+// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+    .main{
+        .section-modules{
+            padding-top: 60px;
+
+            .container-modules{
+                max-width: $width-size;
+                padding-top: 40px;
+
+                &__title{
+                    font-size: 38px;
+                }
+
+                .modules{
+
+                    &__title{
+                        font-size: 22px;
+                        height: 65px;
+                    }
+                    &__item{
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
 }
 @media screen and (max-width: 870px){
 
@@ -93,6 +203,21 @@
                 margin: 20px 0 0;
                 text-align: center;
                 padding: 0 40px;
+            }
+        }
+    }
+// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+    .main{
+        .section-modules{
+            .container-modules{
+                .modules{
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, auto);
+                    grid-template-areas: 
+                    "abastecimiento almacen"
+                    "combustible caja"
+                    "reportes reportes";
+                }
             }
         }
     }
@@ -128,4 +253,28 @@
             }
         }
     }
+// <!-------------- ESTILOS DE LOS MODULOS -------------->
+    .main{
+        .section-modules{
+            .container-modules{
+                .modules{
+                    &__title{
+                        height: auto;
+                        margin-bottom: 15px;   
+                    }
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(4, auto);
+                    grid-template-areas: 
+                    "abastecimiento"
+                    "almacen"
+                    "combustible"
+                    "caja"
+                    "reportes";
+                    grid-gap: 30px;
+                }
+            }
+        }
+    }
+
 }
