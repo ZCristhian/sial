@@ -125,7 +125,55 @@
         }
     }
 }
+// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+.main{
+    .section-conections{
+        padding-top: 100px;
+        .conections{
+            max-width: $width-size;
+            padding: $padding-size;
+            margin: 0 auto;
+            text-align: center;
 
+            &__title{
+                font-size: 5rem;
+                margin-bottom: 30px;
+                color: $title-color;
+            }
+            .tabnav{
+                margin: 0 auto;
+                max-width: 70rem;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #cacaca;
+                margin-bottom: 30px;
+                
+                &__item{
+                    font-size: 18rem;
+                    cursor: pointer;
+                    padding: 10px 0;
+                    user-select: none;
+                    transition: all .5s;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    &:nth-child(1) > .tabnav__link, &:nth-child(5) > .tabnav__link{
+                        width: 55px;
+                    }
+                    &:nth-child(2) > .tabnav__link{
+                        width: 60px;
+                    }
+                }
+
+                &__link{
+                    position: relative;
+                    z-index: -100;
+                    width: 70px;
+                }
+            }
+        }
+    }
+}
 
 
 

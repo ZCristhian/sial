@@ -87,6 +87,42 @@
           font-size: 17px;
           color: #555; }
 
+.main .section-conections {
+  padding-top: 100px; }
+  .main .section-conections .conections {
+    max-width: 120rem;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center; }
+    .main .section-conections .conections__title {
+      font-size: 5rem;
+      margin-bottom: 30px;
+      color: #1d1d1f; }
+    .main .section-conections .conections .tabnav {
+      margin: 0 auto;
+      max-width: 70rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #cacaca;
+      margin-bottom: 30px; }
+      .main .section-conections .conections .tabnav__item {
+        font-size: 18rem;
+        cursor: pointer;
+        padding: 10px 0;
+        user-select: none;
+        transition: all .5s;
+        position: relative;
+        display: flex;
+        align-items: center; }
+        .main .section-conections .conections .tabnav__item:nth-child(1) > .tabnav__link, .main .section-conections .conections .tabnav__item:nth-child(5) > .tabnav__link {
+          width: 55px; }
+        .main .section-conections .conections .tabnav__item:nth-child(2) > .tabnav__link {
+          width: 60px; }
+      .main .section-conections .conections .tabnav__link {
+        position: relative;
+        z-index: -100;
+        width: 70px; }
+
 @media screen and (max-width: 1080px) {
   .main {
     padding-top: 135px; }
