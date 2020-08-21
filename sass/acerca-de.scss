@@ -125,7 +125,157 @@
         }
     }
 }
+// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+.main{
+    .section-conections{
+        padding-top: 100px;
+        .conections{
+            max-width: $width-size;
+            padding: $padding-size;
+            margin: 0 auto;
+            text-align: center;
 
+            &__title{
+                font-size: 5rem;
+                margin-bottom: 30px;
+                color: $title-color;
+            }
+// <!-------------- ESTILOS DEL TABNAV -------------->
+
+            .tabnav{
+                margin: 0 auto;
+                max-width: 70rem;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #cacaca;
+                margin-bottom: 30px;
+                
+                &__item{
+                    font-size: 18rem;
+                    cursor: pointer;
+                    padding: 10px 0;
+                    user-select: none;
+                    transition: all .5s;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    &:nth-child(1) > .tabnav__link, &:nth-child(5) > .tabnav__link{
+                        width: 55px;
+                    }
+                    &:nth-child(2) > .tabnav__link{
+                        width: 60px;
+                    }
+                    &.active::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: #000;
+                        top: calc(100% - 1px);
+                        left: 0;
+                        animation-name: opacidad;
+                        animation-duration: .5s;
+                    }
+                }
+                &__link{
+                    position: relative;
+                    z-index: -100;
+                    width: 70px;
+                }
+                
+            }
+// <!-------------- ESTILOS DELOS PANELES -------------->
+            .panels{
+                min-height: 120px;
+                max-width: 70rem;
+                margin: 0 auto;
+
+                @keyframes movimiento{
+                    0%{
+                        transform: translateY(10px);
+                    }
+                    100%{
+                        transform: translateY(0);
+                    }
+                }
+                @keyframes opacidad{
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+                &__item{
+                    min-height: 310px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    position: absolute;
+                    left: -1000%;
+
+                    &.active{
+                        animation-name: movimiento, opacidad;
+                        animation-duration: .5s, .5s;
+                        position: relative;
+                        left: 0;
+                    }
+                    
+                    & > img {
+                         height: 150px;
+                         width: auto;
+                         margin-bottom: 20px;
+                    }
+                    &:nth-child(2) > img{
+                        width: 400px;
+                    }
+                    &:nth-child(1) > img{
+                        width: 140px;
+                    }
+                    &:nth-child(5) > img{
+                        width: 300px;
+                        height: auto;
+                    }
+                    h3{
+                        font-size: 2.8rem;
+                        margin-bottom: 6px;
+                        color: $title-color;
+                    }
+                    p{
+                        font-size: 1.7rem;
+                        color: $paragraph-color;
+                    }
+                }
+            }
+// <!-------------- ESTILOS DE LAS CONEXIONES-MIN (DOTNAV) -------------->
+            .dotnav{
+                display: none;
+                margin-top: 5px;
+
+                &__list{
+                    display: flex;
+                    margin: 0 auto;
+                    max-width: 14rem;
+                    justify-content: space-between;
+                }
+                &__item.active > .dotnav__link{
+                    background: rgb(110, 110, 110);
+                }
+                &__link{
+                    width: 10px;
+                    height: 10px;
+                    background: rgb(197, 197, 197);
+                    border-radius: 100%;
+                    position: relative;
+                    z-index: -1;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -185,6 +335,14 @@
                 }
             }
         }
+// <!-------------- ESTILOS DE LAS CONEXIONES -------------->
+    .section-conections{
+        .conections{
+            &__title{
+                font-size: 3.8rem;
+            }
+        }
+    }
     }
 
 }
@@ -232,6 +390,7 @@
         .about-hero{
             padding: 0 $padding-size;
         }
+
     }
 }
 @media screen and (max-width: 560px){
@@ -253,6 +412,40 @@
             }
         }
     }
+// <!-------------- ESTILOS DE LAS CONEXIONES -------------->
+    .main{
+        .section-conections{
+            .conections{
+                .dotnav{
+                    display: block;
+                }
+                .tabnav{
+                    display: none;
+                }
+                .panels{
+                    &__item{
+                        min-height: 260px;
+
+                        & > img {
+                            height: 100px;
+                            width: auto;
+                            margin-bottom: 20px;
+                       }
+                       &:nth-child(2) > img{
+                           width: 260px;
+                       }
+                       &:nth-child(1) > img{
+                           width: 100px;
+                       }
+                       &:nth-child(5) > img{
+                           width: 240px;
+                       }
+                    }
+                }
+            }
+        }
+    }
+
 // <!-------------- ESTILOS DE LOS MODULOS -------------->
     .main{
         .section-modules{

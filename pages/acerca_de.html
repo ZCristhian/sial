@@ -1,135 +1,245 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Sial">
-    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../normalize.css">
-    <link rel="stylesheet" href="../css/acerca-de.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Sial" />
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../normalize.css" />
+  <link rel="stylesheet" href="../css/acerca-de.css" />
 
-    <title>Sial - Acerca de</title>
+  <title>Sial - Acerca de</title>
 </head>
+
 <body>
-    <!-------------- MENU DE NAVEGACION -------------->
-    <header class="header">
-        <nav class="main-nav">
-            <a href="/" >
-                <img src="../img/logo-sial.svg" alt="Logo de Sial" class="main-nav__logo">
-            </a>
-            <ul class="main-nav__list">
-                <li class="main-nav__item">
-                    <a href="/" class="main-nav__link">Inicio</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="./acerca_de.html" class="main-nav__link">Acerca de</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="#" class="main-nav__link">Clientes</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="#" class="main-nav__link">Manuales</a>
-                </li>
-                <li class="main-nav__item  main-nav__item--hidden">
-                    <a href="#" class="main-nav__link--mobile">
-                        <button class="main-nav__btn">Contáctenos</button>
-                    </a>
-                </li>
+  <!-------------- MENU DE NAVEGACION -------------->
+  <header class="header">
+    <nav class="main-nav">
+      <a href="/">
+        <img src="../img/logo-sial.svg" alt="Logo de Sial" class="main-nav__logo" />
+      </a>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="/" class="main-nav__link">Inicio</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="./acerca_de.html" class="main-nav__link">Acerca de</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Clientes</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Manuales</a>
+        </li>
+        <li class="main-nav__item main-nav__item--hidden">
+          <a href="#" class="main-nav__link--mobile">
+            <button class="main-nav__btn">Contáctenos</button>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="main-nav__link--large">
+        <button class="main-nav__btn">Contáctenos</button>
+      </a>
+      <div class="mobile-menu">
+        <span class="line line-top"></span>
+        <span class="line line-medium"></span>
+        <span class="line line-bottom"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-------------- HERO ABOUT -------------->
+  <main class="main">
+    <section class="section-about">
+      <div class="about-hero">
+        <figure class="about-hero__figure">
+          <img class="about-hero__image" src="../img/acerca_de/notebook.png" alt="Pantalla principal de Sial" />
+        </figure>
+        <div class="about-hero__wrapper">
+          <h1 class="about-hero__title">Acerca de</h1>
+          <h2 class="about-hero__subtitle">
+            SISTEMA DE ADMINISTRACION LOGISTICA – S.I.A.L.
+          </h2>
+          <p class="about-hero__copy">
+            Este Sistema esta diseñado para uso del área de ABASTECIMIENTOS y
+            ALMACEN de las entidades del Gobierno Local, Gobierno Regional y
+            Gobierno Nacional. Es elaborado por especialistas y profesionales
+            con amplia experiencia laboral en el Sector Público (Contador e
+            Ingeniero de Sistemas).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-------------- SECCION DE LOS MODULOS -------------->
+    <section class="section-modules" id="modulos">
+      <div class="container-modules">
+        <h2 class="container-modules__title">Módulos del Sistema</h2>
+        <ul class="modules">
+          <li class="modules__item modules__item--abastecimiento">
+            <img class="modules__image" src="../img/acerca_de/img-abas.svg" />
+            <h3 class="modules__title">Módulo de Abastecimiento</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                Elaboración de Solicitud de Cotización
+              </li>
+              <li class="feature-item">
+                Elaboración del Cuadro Comparativo de Cotizaciones
+              </li>
+              <li class="feature-item">Registro y control de Contratos</li>
+              <li class="feature-item">Elaboración de Orden de Compra</li>
+              <li class="feature-item">Elaboración de Orden de Servicio</li>
             </ul>
-            <a href="#" class="main-nav__link--large">
-                <button class="main-nav__btn">Contáctenos</button>
-            </a>
-            <div class="mobile-menu">
-                <span class="line line-top"></span>
-                <span class="line line-medium"></span>
-                <span class="line line-bottom"></span>
-            </div>
-        </nav>
-	</header>
-	
-	<!-------------- HERO ABOUT -------------->
-    <main class="main">
-        <section class="section-about">
-			<div class="about-hero">
-				<figure class="about-hero__figure">
-					<img class="about-hero__image" src="../img/acerca_de/notebook.png" alt="Pantalla principal de Sial">
-				</figure>
-				<div class="about-hero__wrapper">
-					<h1 class="about-hero__title">Acerca de</h1>
-					<h2 class="about-hero__subtitle">SISTEMA DE ADMINISTRACION LOGISTICA – S.I.A.L.</h2>
-					<p class="about-hero__copy">
-						Este Sistema esta diseñado para uso del área de ABASTECIMIENTOS y ALMACEN de las entidades del Gobierno Local, Gobierno Regional y Gobierno Nacional. Es elaborado por especialistas y profesionales con amplia experiencia laboral en el Sector Público (Contador e Ingeniero de Sistemas).
-					</p>
-				</div>
-			</div>
-        </section>        
+          </li>
+          <li class="modules__item modules__item--almacen">
+            <img class="modules__image" src="../img/acerca_de/img-almacen.svg" alt="" />
+            <h3 class="modules__title">Módulo de Almacén</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                Elaboración de Inventario Inicial de Bienes de Almacén
+              </li>
+              <li class="feature-item">
+                Elaboración de Pedido – Comprobante de Salida (PECOSAS)
+              </li>
+              <li class="feature-item">
+                Internamiento de Bienes según Orden de Compra, Inventario y
+                NEAS
+              </li>
+              <li class="feature-item">
+                Elaboración de Notas de Entrada a Almacén (NEAs)
+              </li>
+            </ul>
+          </li>
+          <li class="modules__item modules__item--combustible">
+            <img class="modules__image" src="../img/acerca_de/img-fuel.svg" alt="" />
+            <h3 class="modules__title">Módulo de Control de Combustible</h3>
+            <ul class="feature-list">
+              <li class="feature-item">Elaboración de Vales</li>
+              <li class="feature-item">
+                Elaboración de Liquidación de Vales
+              </li>
+            </ul>
+          </li>
+          <li class="modules__item modules__item--caja">
+            <img class="modules__image" src="../img/acerca_de/img-money.svg" alt="" />
+            <h3 class="modules__title">Módulo de Caja/Recaudacion</h3>
+            <ul class="feature-list">
+              <li class="feature-item">Recaudacion de Ingresos</li>
+              <li class="feature-item">Reportes</li>
+            </ul>
+          </li>
+          <li class="modules__item modules__item--reportes">
+            <img class="modules__image" src="../img/acerca_de/img-reports.svg" alt="" />
+            <h3 class="modules__title">Reportes</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                Emisión de REPORTES GENERALES (Adquisiciones por meta,
+                Movimiento de Bienes, Notas de contabilidad mensual, Kardex,
+                Bincard y Otros (incluye en Formato PDF y para Exportar a
+                Excel).
+              </li>
+              <li class="feature-item">
+                Generación de Archivo para el registro de información en el
+                SEACE, de las Órdenes de Compra y Servicios, de conformidad a
+                la Directiva N° 007-2012-OSCE/CD, Resolución N°
+                269-2013-OSCE/PRE y Comunicado N° 002-2013-OSCE/DTN
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <!-------------- SECCION DE LOS MODULOS -------------->
-        <section class="section-modules" id="modulos">
-            <div class="container-modules">
-                <h2 class="container-modules__title">Módulos del Sistema</h2>
-                <ul class="modules">
-                    <li class="modules__item modules__item--abastecimiento">
-                        <img class="modules__image" src="../img/acerca_de/img-abas.svg">
-                        <h3 class="modules__title">Módulo de Abastecimiento</h3>
-                        <ul class="feature-list">
-                            <li class="feature-item">Elaboración de Solicitud de Cotización</li>
-                            <li class="feature-item">Elaboración del Cuadro Comparativo de Cotizaciones</li>
-                            <li class="feature-item">Registro y control de Contratos</li>
-                            <li class="feature-item">Elaboración de Orden de Compra</li>
-                            <li class="feature-item">Elaboración de Orden de Servicio</li>
-                        </ul>
-                    </li>
-                    <li class="modules__item modules__item--almacen">
-                        <img class="modules__image" src="../img/acerca_de/img-almacen.svg" alt="">
-                        <h3 class="modules__title">Módulo de Almacén</h3>
-                        <ul class="feature-list">
-                            <li class="feature-item">Elaboración de Inventario Inicial de Bienes de Almacén</li>
-                            <li class="feature-item">Elaboración de Pedido – Comprobante de Salida (PECOSAS)</li>
-                            <li class="feature-item">Internamiento de Bienes según Orden de Compra, Inventario y NEAs</li>
-                            <li class="feature-item">Elaboración de Notas de Entrada a Almacén (NEAs)</li> 
+    <!-------------- SECCION DE LOS CONEXIONES -------------->
+    <section class="section-conections">
+      <div class="conections">
+        <h2 class="conections__title">Conexión con otros Sistemas</h2>
+        <ul class="tabnav" id="tabs">
+          <li class="tabnav__item active">
+            <img class="tabnav__link" src="../img/acerca_de/icon-siaf.svg" alt="" />
+          </li>
+          <li class="tabnav__item">
+            <img class="tabnav__link" src="../img/acerca_de/icon-sunat_min.svg" alt="" />
+          </li>
+          <li class="tabnav__item">
+            <img class="tabnav__link" src="../img/acerca_de/icon-rnp_min.svg" alt="" />
+          </li>
+          <li class="tabnav__item">
+            <img class="tabnav__link" src="../img/acerca_de/icon-seace_min.svg" alt="" />
+          </li>
+          <li class="tabnav__item">
+            <img class="tabnav__link" src="../img/acerca_de/icon-reniec_min.svg" alt="" />
+          </li>
+        </ul>
+        <div class="panels">
+          <div class="panels__item active">
+            <img src="../img/acerca_de/icon-siaf.svg" alt="" />
+            <h3>Conexión con SIAF</h3>
+            <p>
+              Para importar Metas, Proveedores, Clasificadores, Rubros, Tipos
+              de Recursos, Cuentas Contables y Fases: Compromiso, Devengado y
+              Girado.
+            </p>
+          </div>
+          <div class="panels__item">
+            <img src="../img/acerca_de/icon-sunat_large.svg" alt="" />
+            <h3>Conexión con SUNAT</h3>
+            <p>
+              Para Obtener Datos Básicos de los proveedores y verificar el
+              Estado de Situación Tributaria del proveedor.
+            </p>
+          </div>
+          <div class="panels__item">
+            <img src="../img/acerca_de/icon-rnp_large.svg" alt="" />
+            <h3>Conexión con RNP</h3>
+            <p>
+              Para verificar la Habilitación y Vigencia del Registro Nacional
+              de Proveedores.
+            </p>
+          </div>
+          <div class="panels__item">
+            <img src="../img/acerca_de/icon-seace_large.svg" alt="" />
+            <h3>Conexión con SEACE</h3>
+            <p>
+              Para Importar Unidades Orgánicas a fin de generar archivo para
+              registro de Información en el SEACE.
+            </p>
+          </div>
+          <div class="panels__item">
+            <img src="../img/acerca_de/icon-reniec_large.svg" alt="" />
+            <h3>Conexión con RENIEC</h3>
+            <p>
+              Para obtener Nombres y Apellidos según DNI.
+            </p>
+          </div>
+        </div>
 
-                        </ul>
-                    </li>
-                    <li class="modules__item modules__item--combustible">
-                        <img class="modules__image" src="../img/acerca_de/img-fuel.svg" alt="">
-                        <h3 class="modules__title">Módulo de Control de Combustible</h3>
-                        <ul class="feature-list">
-                            <li class="feature-item">Elaboración de Vales</li>
-                            <li class="feature-item">Elaboración de Liquidación de Vales</li>
-                        </ul>
-                    </li>
-                    <li class="modules__item modules__item--caja">
-                        <img class="modules__image" src="../img/acerca_de/img-money.svg" alt="">
-                        <h3 class="modules__title">Módulo de Caja/Recaudacion</h3>
-                        <ul class="feature-list">
-                            <li class="feature-item">Recaudacion de Ingresos</li>
-                            <li class="feature-item">Reportes</li>
-                        </ul>
-                    </li>
-                    <li class="modules__item modules__item--reportes">
-                        <img class="modules__image" src="../img/acerca_de/img-reports.svg" alt="">
-                        <h3 class="modules__title">Reportes</h3>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                Emisión de REPORTES GENERALES (Adquisiciones por meta, Movimiento de Bienes, Notas de contabilidad mensual, Kardex, Bincard y Otros (incluye en Formato PDF y para Exportar a Excel).
-                            </li>
-                            <li class="feature-item">
-                                Generación de Archivo para el registro de información en el SEACE, de las Órdenes de Compra y Servicios, de conformidad a la Directiva N° 007-2012-OSCE/CD, Resolución N° 269-2013-OSCE/PRE y Comunicado N° 002-2013-OSCE/DTN
-                            </li>
-                        </ul>
+        <div class="dotnav">
+          <ul class="dotnav__list" id="dotnav">
+            <li class="dotnav__item active">
+              <div class="dotnav__link"></div>
+            </li>
+            <li class="dotnav__item">
+              <div class="dotnav__link"></div>
+            </li>
+            <li class="dotnav__item">
+              <div class="dotnav__link"></div>
+            </li>
+            <li class="dotnav__item">
+              <div class="dotnav__link"></div>
+            </li>
+            <li class="dotnav__item">
+              <div class="dotnav__link"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                    </li>
-
-                </ul>
-            </div>
-            
-        </section>
-    </main>
-
-
-
-
-    <script src="../js/main.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/tab.js"></script>
 </body>
+
 </html>
