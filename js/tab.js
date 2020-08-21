@@ -1,9 +1,9 @@
 (function(d){
-    var tabs = Array.prototype.slice.apply(d.querySelectorAll('.tab-item'));
-    var panels = Array.prototype.slice.apply(d.querySelectorAll('.panels-item'));
+    var tabs = Array.prototype.slice.apply(d.querySelectorAll('.tabnav__item'));
+    var panels = Array.prototype.slice.apply(d.querySelectorAll('.panels__item'));
 
     d.getElementById('tabs').addEventListener('click', (e) => {
-        if (e.target.classList.contains('tab-item')){
+        if (e.target.classList.contains('tabnav__item')){
             var i = tabs.indexOf(e.target);
             tabs.map(tab => tab.classList.remove('active'));
             tabs[i].classList.add('active');
@@ -20,11 +20,11 @@
 
 
 (function(b){
-    var tabs = Array.prototype.slice.apply(b.querySelectorAll('.tab-item-min'));
-    var panels = Array.prototype.slice.apply(b.querySelectorAll('.panels-item'));
+    var tabs = Array.prototype.slice.apply(b.querySelectorAll('.dotnav__item'));
+    var panels = Array.prototype.slice.apply(b.querySelectorAll('.panels__item'));
 
     b.getElementById('dotnav').addEventListener('click', (e) => {
-        if (e.target.classList.contains('tab-item-min')){
+        if (e.target.classList.contains('dotnav__item')){
             var i = tabs.indexOf(e.target);
             tabs.map(tab => tab.classList.remove('active'));
             tabs[i].classList.add('active');
