@@ -125,13 +125,13 @@
         }
     }
 }
-// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+// <!-------------- ESTILOS DE LA SECCION CONECCTIONS -------------->
 .main{
     .section-conections{
         padding-top: 100px;
         .conections{
             max-width: $width-size;
-            padding: $padding-size;
+            padding: 0 $padding-size;
             margin: 0 auto;
             text-align: center;
 
@@ -275,6 +275,61 @@
             }
         }
     }
+// <!-------------- ESTILOS DE LA SECCION SECURITY -------------->
+    .section-security{
+        padding-top: 100px;
+
+        .security{
+            max-width: $width-size;
+            padding: 0 $padding-size;
+            margin: 0 auto;
+            text-align: center;
+
+            &__title{
+                color: $title-color;
+                font-size: 5rem;
+                margin-bottom: 25px;
+            }
+            &__image{
+                max-width: 400px;
+                margin-bottom: 20px;
+            }
+            &__copy{
+                color: $paragraph-color;
+                font-size: 1.7rem;
+                display: block;
+            }
+        }
+    }
+// <!-------------- ESTILOS DE INTERNET -------------->
+    .section-internet{
+        padding-top: 100px;
+
+        .internet{
+            max-width: $width-size;
+            padding: 0 8%;
+            margin: 0 auto;
+            text-align: center;
+
+            &__title{
+                font-size: 3.2rem;
+                color: $title-color;
+                margin-bottom: 20px;
+            }
+            &__copy{
+                font-size: 17px;
+                color: $paragraph-color;
+            }
+            [class*="lan__copy"]{
+                display: block;
+                margin-bottom: 10px;
+            }
+            .lan__copy--4{
+                margin-bottom: 0;
+            }
+        }
+    }
+
 }
 
 
@@ -335,14 +390,45 @@
                 }
             }
         }
-// <!-------------- ESTILOS DE LAS CONEXIONES -------------->
-    .section-conections{
-        .conections{
-            &__title{
-                font-size: 3.8rem;
+    }
+// <!-------------- ESTILOS DE LAS CONECCTIONS -------------->
+    .main{
+        .section-conections{
+            .conections{
+                max-width: $width-size;
+                padding: 0 $padding-size;
+
+                &__title{
+                    font-size: 3.8rem;
+                }
             }
         }
     }
+// <!-------------- ESTILOS DE SECURITY -------------->
+    .main{
+        .section-security{
+            .security{
+                max-width: $width-size;
+                padding: 0 $padding-size;
+
+                &__title{
+                    font-size: 3.8rem;
+                }
+            }
+        }
+    }
+// <!-------------- ESTILOS DE INTERNET -------------->
+    .main{
+        .section-internet{
+            .internet{
+                max-width: $width-size;
+                padding: $padding-size;
+
+                &__title{
+                    font-size: 28px;
+                }
+            }
+        }
     }
 
 }
@@ -392,6 +478,35 @@
         }
 
     }
+// <!-------------- ESTILOS DE LAS CONEXIONES -------------->
+    .main{
+        .section-conections{
+            .conections{
+                padding: 0 $padding-size;
+
+                &__title{
+                    font-size: 3.8rem;
+                }
+            }
+        }
+    }
+// <!-------------- ESTILOS DE SECURITY -------------->
+    .main{
+        .section-security{
+            .security{
+                padding: 0 $padding-size;
+            }
+        }
+    }
+// <!-------------- ESTILOS DE INTERNET -------------->
+    .main{
+        .section-internet{
+            .internet{
+                padding: $padding-size;
+            }
+        }
+    }
+
 }
 @media screen and (max-width: 560px){
 
@@ -412,7 +527,19 @@
             }
         }
     }
-// <!-------------- ESTILOS DE LAS CONEXIONES -------------->
+// <!-------------- ESTILOS DEL HERO -------------->
+    .main{
+        .section-modules{
+            .container-modules{
+                .modules__item{
+                    .feature-list{
+                        row-gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+// <!-------------- ESTILOS DE LAS CONECCTIONS -------------->
     .main{
         .section-conections{
             .conections{
@@ -470,4 +597,20 @@
         }
     }
 
+}
+
+@media screen and (max-width: 406px){
+// <!-------------- ESTILOS DE CONECCTIONS -------------->
+    .main{
+        .section-conections{
+            .conections{
+                .panels{
+
+                    &__item{
+                        min-height: 285px;
+                    }
+                }
+            }
+        }
+    }
 }

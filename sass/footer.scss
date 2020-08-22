@@ -137,6 +137,7 @@
 
         .footer{
             max-width: 600px;
+            padding: 0 $padding-size;
 
             &__grid{
                 grid-template-columns: auto;
