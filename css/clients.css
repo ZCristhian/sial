@@ -67,8 +67,8 @@
 
   .clients {
     max-width: 90rem;
-    padding: 30px;
-    padding-left: 50px; }
+    padding: 20px;
+    padding-left: 40px; }
     .clients__list {
       align-items: end; } }
 @media screen and (max-width: 870px) {

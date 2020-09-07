@@ -196,20 +196,21 @@ a{
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            overflow: visible;
             .line{
                 position: absolute;
-                width: 2.8rem; 
-                height: 2px;
+                width: 3rem; 
+                height: 2.4px;
                 background: #000;
                 transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
                 &-bottom{
-                    margin-top: 15px;
+                    margin-top: 18px;
                 }
                 &-medium{
-                    margin-top: 2.5px;
+                    margin-top: 2.9px;
                 }
                 &-top{
-                    margin-top: -1rem;
+                    margin-top: -1.2rem;
                 }
             }
         }
