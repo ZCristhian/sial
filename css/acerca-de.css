@@ -262,23 +262,29 @@
       .main .section-modules .container-modules .modules__item {
         padding: 10px; }
 
-  .main .section-conections .conections {
-    max-width: 90rem;
-    padding: 0 20px; }
-    .main .section-conections .conections__title {
-      font-size: 3.8rem; }
+  .main .section-conections {
+    padding-top: 60px; }
+    .main .section-conections .conections {
+      max-width: 90rem;
+      padding: 0 20px; }
+      .main .section-conections .conections__title {
+        font-size: 3.8rem; }
 
-  .main .section-security .security {
-    max-width: 90rem;
-    padding: 0 20px; }
-    .main .section-security .security__title {
-      font-size: 3.8rem; }
+  .main .section-security {
+    padding-top: 60px; }
+    .main .section-security .security {
+      max-width: 90rem;
+      padding: 0 20px; }
+      .main .section-security .security__title {
+        font-size: 3.8rem; }
 
-  .main .section-internet .internet {
-    max-width: 90rem;
-    padding: 20px; }
-    .main .section-internet .internet__title {
-      font-size: 28px; } }
+  .main .section-internet {
+    padding-top: 60px; }
+    .main .section-internet .internet {
+      max-width: 90rem;
+      padding: 20px; }
+      .main .section-internet .internet__title {
+        font-size: 28px; } }
 @media screen and (max-width: 870px) {
   .main .about-hero {
     max-width: 600px;

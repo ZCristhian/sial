@@ -13,101 +13,101 @@
 </head>
 
 <body>
-  <!-------------- MENU DE NAVEGACION -------------->
-  <header class="header">
-    <nav class="main-nav">
-      <a href="/">
-        <img src="./img/logo-sial.svg" alt="Logo de Sial" class="main-nav__logo">
-      </a>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a href="/" class="main-nav__link">Inicio</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="./pages/acerca_de.html" class="main-nav__link">Acerca de</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Clientes</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Manuales</a>
-        </li>
-        <li class="main-nav__item  main-nav__item--hidden">
-          <a href="#" class="main-nav__link--mobile">
-            <button class="main-nav__btn">Contáctenos</button>
+<!-------------- MENU DE NAVEGACION -------------->
+<header class="header">
+  <nav class="main-nav">
+    <a href="/">
+      <img src="./img/logo-sial.svg" alt="Logo de Sial" class="main-nav__logo">
+    </a>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a href="/" class="main-nav__link">Inicio</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="./pages/acerca_de.html" class="main-nav__link">Acerca de</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="./pages/clients.html" class="main-nav__link">Clientes</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="./pages/manuales.html" class="main-nav__link">Manuales</a>
+      </li>
+      <li class="main-nav__item  main-nav__item--hidden">
+        <a href="./pages/contact.html" class="main-nav__link--mobile">
+          <button class="main-nav__btn">Contáctenos</button>
+        </a>
+      </li>
+    </ul>
+    <a href="./pages/contact.html" class="main-nav__link--large">
+      <button class="main-nav__btn">Contáctenos</button>
+    </a>
+    <div class="mobile-menu">
+      <span class="line line-top"></span>
+      <span class="line line-medium"></span>
+      <span class="line line-bottom"></span>
+    </div>
+  </nav>
+</header>
+
+<!-------------- SECCION DEL HERO -------------->
+<main class="main">
+  <section class="section-hero">
+    <div class="hero">
+      <div class="hero__wrapper">
+        <div class="hero__title">SIAL</div>
+        <p class="hero__copy">
+          El Software "Sistema Integrado de Administración Gubernamental" es un "Sistema Gerencial" que tiene diversos
+          módulos personalizados para cada tipo de empresa Privada ó Entidades Públicas.
+        </p>
+        <div class="hero__container-btn">
+          <a href="#" class="hero__link">
+            <button class="hero__btn">Contáctenos</button>
           </a>
+        </div>
+      </div>
+      <figure class="hero__figure">
+        <div class="hero__background-circle"></div>
+        <img src="./img/inicio/main-screen-sial.png" alt="" class="hero__image">
+      </figure>
+    </div>
+  </section>
+
+  <!-------------- SECCION DEL WHY -------------->
+  <section class="section-why">
+    <div class="why">
+      <h2 class="why__title">¿Porqué elegir SIAL?</h2>
+      <ul class="why__list">
+        <li class="why__item">
+          <img class="why__image" src="./img/inicio/icon-module.svg" alt="">
+          <h3 class="why__subtitle">Modulos del Sistema</h3>
+          <p class="why__subcopy">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa, magnam voluptate consequatur qui non
+            labore libero voluptatibus fugit distinctio?
+          </p>
+          <a class="why__link" href="./pages/acerca_de.html#modulos">Más Información</a>
+        </li>
+        <li class="why__item">
+          <img class="why__image" src="./img/inicio/icon-connect.svg" alt="">
+          <h3 class="why__subtitle">Conexión con otros Sistemas</h3>
+          <p class="why__subcopy">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa, magnam voluptate consequatur qui non
+            labore libero voluptatibus fugit distinctio?
+          </p>
+          <a class="why__link" href="/pages/acerca_de.html#conexiones">Más Información</a>
+        </li>
+        <li class="why__item">
+          <img class="why__image" src="./img/inicio/icon-security.svg" alt="">
+          <h3 class="why__subtitle">Seguridad de la base de datos</h3>
+          <p class="why__subcopy">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa, magnam voluptate consequatur qui non
+            labore libero voluptatibus fugit distinctio?
+          </p>
+          <a class="why__link" href="/pages/acerca_de.html#seguridad">Más Información</a>
         </li>
       </ul>
-      <a href="#" class="main-nav__link--large">
-        <button class="main-nav__btn">Contáctenos</button>
-      </a>
-      <div class="mobile-menu">
-        <span class="line line-top"></span>
-        <span class="line line-medium"></span>
-        <span class="line line-bottom"></span>
-      </div>
-    </nav>
-  </header>
-
-  <!-------------- SECCION DEL HERO -------------->
-  <main class="main">
-    <section class="section-hero">
-      <div class="hero">
-        <div class="hero__wrapper">
-          <div class="hero__title">SIAL</div>
-          <p class="hero__copy">
-            El Software "Sistema Integrado de Administración Gubernamental" es un "Sistema Gerencial" que tiene diversos
-            módulos personalizados para cada tipo de empresa Privada ó Entidades Públicas.
-          </p>
-          <div class="hero__container-btn">
-            <a href="#" class="hero__link">
-              <button class="hero__btn">Contáctenos</button>
-            </a>
-          </div>
-        </div>
-        <figure class="hero__figure">
-          <div class="hero__background-circle"></div>
-          <img src="./img/inicio/main-screen-sial.png" alt="" class="hero__image">
-        </figure>
-      </div>
-    </section>
-
-    <!-------------- SECCION DEL WHY -------------->
-    <section class="section-why">
-      <div class="why">
-        <h2 class="why__title">¿Porqué elegir SIAL?</h2>
-        <ul class="why__list">
-          <li class="why__item">
-            <img class="why__image" src="./img/inicio/icon-module.svg" alt="">
-            <h3 class="why__subtitle">Modulos del Sistema</h3>
-            <p class="why__subcopy">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa, magnam voluptate consequatur qui non
-              labore libero voluptatibus fugit distinctio?
-            </p>
-            <a class="why__link" href="./pages/acerca_de.html#modulos">Más Información</a>
-          </li>
-          <li class="why__item">
-            <img class="why__image" src="./img/inicio/icon-connect.svg" alt="">
-            <h3 class="why__subtitle">Conexión con otros Sistemas</h3>
-            <p class="why__subcopy">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa, magnam voluptate consequatur qui non
-              labore libero voluptatibus fugit distinctio?
-            </p>
-            <a class="why__link" href="/pages/acerca_de.html#conexiones">Más Información</a>
-          </li>
-          <li class="why__item">
-            <img class="why__image" src="./img/inicio/icon-security.svg" alt="">
-            <h3 class="why__subtitle">Seguridad de la base de datos</h3>
-            <p class="why__subcopy">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsa, magnam voluptate consequatur qui non
-              labore libero voluptatibus fugit distinctio?
-            </p>
-            <a class="why__link" href="/pages/acerca_de.html#seguridad">Más Información</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
   <!-------------- SECCION DEL FOOTER -------------->
   <footer class="section-footer">
@@ -125,19 +125,19 @@
           <h3 class="footer__title">Explorar</h3>
           <ul class="footer-nav">
             <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Inicio</a>
+              <a href="/" class="footer-nav__link">Inicio</a>
             </li>
             <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Acerca&nbspde</a>
+              <a href="./pages/acerca_de.html" class="footer-nav__link">Acerca&nbspde</a>
             </li>
             <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Clientes</a>
+              <a href="./pages/clients.html" class="footer-nav__link">Clientes</a>
             </li>
             <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Manuales</a>
+              <a href="./pages/manuales.html" class="footer-nav__link">Manuales</a>
             </li>
             <li class="footer-nav__item">
-              <a href="#" class="footer-nav__link">Contacto</a>
+              <a href="./pages/contact.html" class="footer-nav__link">Contacto</a>
             </li>
           </ul>
         </div>
@@ -163,11 +163,12 @@
     </div>
   </footer>
 
+  Claro ahora si no?
 
 
 
-
-  <script src="./js/main.js"></script>
+<script src="./js/main.js"></script>
 </body>
 
 </html>
+

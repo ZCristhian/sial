@@ -1,0 +1,138 @@
+// Importacion de Css no de Sass
+@import url("header.css");
+@import url("footer.css");
+
+@import "components/variables";
+@import "components/button";
+
+.main{
+  padding-top: 175px;
+}
+
+.hero{
+  display: flex;
+  max-width: $width-size;
+  margin: 0 auto;
+  padding: 0 $padding-size;
+
+  &__wrapper{
+    margin-right: 10%;
+  }
+  &__title{
+    margin: 50px 0 12px;
+    // margin-bottom: 12px;
+    font-size: 6rem;
+    font-weight: 600;
+    color: $title-color;
+  }
+  &__copy{
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    color: $paragraph-color;
+    margin-bottom: 30px;
+  }
+  &__figure{
+    width: auto;
+  }
+  &__image{
+    width: 460px;
+  }
+}
+.section-clients{
+  padding-top: 100px;
+}
+.clients{
+  background: $background-stack;
+  max-width: $width-size;
+  margin: 0 auto;
+  width: 95%;
+  border-radius: 25px;
+  padding: 40px;
+  padding-left: 60px;
+
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 50px;
+  }
+  &__item{
+    font-size: 1.7rem;
+    color: $title-color;
+    list-style: disc;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  $padding-size: 20px;
+  $width-size: 90rem;
+
+  .main{
+    padding-top: 135px;
+  }
+  .hero{
+    max-width: $width-size;
+    padding: 0 $padding-size;
+
+    &__wrapper{
+      margin-right: 50px;
+    }
+    &__title{
+      font-size: 4.8rem;
+    }
+    &__image{
+      width: 380px;
+    }
+  }
+
+  .section-clients{
+    padding-top: 60px;
+  }
+  .clients{
+    max-width: $width-size;
+    padding: 30px;
+    padding-left: 50px;
+
+    &__list{
+      align-items: end;
+    }
+  }
+}
+
+@media screen and (max-width: 870px){
+  .hero{
+    max-width: 500px;
+    flex-direction: column-reverse;
+
+    &__wrapper{
+      margin: 30px 0 0;
+      text-align: center;
+    }
+    &__title{
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+    &__image{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  $padding-size: 15px;
+
+  .hero{
+    padding: 0 $padding-size;
+  }
+}
+
+@media screen and (max-width: 794px){
+    .clients{
+      &__list{
+        grid-template-columns: 1fr;
+      }
+    }
+
+}

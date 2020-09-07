@@ -81,9 +81,11 @@
 
 /*************** MEDIA QUERYS ****************/
 @media screen and (max-width: 1080px) {
-  .section-footer .footer {
-    max-width: 90rem;
-    padding: 0 20px; } }
+  .section-footer {
+    margin-top: 60px; }
+    .section-footer .footer {
+      max-width: 90rem;
+      padding: 0 20px; } }
 @media screen and (max-width: 767px) {
   .section-footer {
     padding-bottom: 10px; }
