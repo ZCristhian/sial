@@ -152,10 +152,11 @@ a{
                 flex-direction: column;
                 justify-content: start;
                 width: 100%;
-                top: 100%;
+                // top: 100%;
                 background: #fff;
                 transition: all ease-in-out .4s;
                 overflow: hidden;
+                top: 55px;
                 &::after{
                     content: "";
                     width: 100%;
@@ -171,6 +172,7 @@ a{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-shrink: 0;
                 &--hidden{
                     height: auto;
                     margin-top: 70px;

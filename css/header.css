@@ -114,10 +114,10 @@ a {
         flex-direction: column;
         justify-content: start;
         width: 100%;
-        top: 100%;
         background: #fff;
         transition: all ease-in-out .4s;
-        overflow: hidden; }
+        overflow: hidden;
+        top: 55px; }
         .header .main-nav__list::after {
           content: "";
           width: 100%;
@@ -130,7 +130,8 @@ a {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        flex-shrink: 0; }
         .header .main-nav__item--hidden {
           height: auto;
           margin-top: 70px; }
