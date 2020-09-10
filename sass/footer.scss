@@ -28,7 +28,7 @@
         color: $title-color;
     }
 
-// <!-------------- ESTILOS DE LOS ICONOS-------------->
+    // <!-------------- ESTILOS DE LOS ICONOS-------------->
     &-container-social__icons {
         display: flex;
         justify-content: space-between;
@@ -37,30 +37,31 @@
 
 
     .social-icon {
-        filter: grayscale(1);
+        // filter: grayscale(1);
         transition: all .2s;
         width: 35px;
         height: 35px;
+        border-radius: 10px;
 
         &:hover {
-            filter: none;
+            // filter: none;
             transform: scale(1.1);
         }
 
         &__facebook {
-            background: url('../img/footer/icon-facebook.svg');
+            background: url('../img/footer/icon-facebook-dark.svg');
             width: 30px;
             height: 30px;
             background-size: cover;
         }
 
         &__youtube {
-            background: url('../img/footer/icon-youtube.svg');
+            background: url('../img/footer/icon-youtube-dark.svg');
             background-size: cover;
         }
 
         &__whatsapp {
-            background: url('../img/footer/icon-whatsapp.svg');
+            background: url('../img/footer/icon-whatsapp-dark.svg');
             background-size: cover;
         }
     }
@@ -71,6 +72,7 @@
         display: inline-block;
     }
 }
+
 // <!-------------- ESTILOS DE NAVEGACION DEL FOOTER -------------->
 .footer-nav {
     display: grid;
@@ -84,13 +86,16 @@
     }
 
     &__link {
-        color: #515154;
+        color: rgb(161, 161, 166);
+        transition: all .2s;
 
         &:hover {
             text-decoration: underline;
+            color: $title-color;
         }
     }
 }
+
 // <!-------------- ESTILOS DE LA LISTA DE CONTACTO DE FOOTER -------------->
 .contacto-list {
     display: grid;
@@ -102,12 +107,12 @@
     &__item {
         font-size: 14px;
         font-weight: 500;
-        color: #555555;
+        color: #dadada;
     }
 
     &__copy {
         font-size: 14px;
-        color: #515154;
+        color: rgb(161, 161, 166);
     }
 
     &__phone {
@@ -119,14 +124,15 @@
         }
     }
 }
+
 // <!-------------- ESTILOS DE COPYRIGHT -------------->
 .footer-copytight {
     text-align: center;
     font-size: 13px;
     margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid $title-color;
-    color: #555555;
+    border-top: 1px solid rgb(52, 52, 52);
+    color: rgb(161, 161, 166);
 }
 
 

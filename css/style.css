@@ -19,12 +19,12 @@
     margin-bottom: 12px;
     font-size: 60px;
     font-weight: 600;
-    color: #f0f0f0; }
+    color: #f5f5f7; }
   .hero__copy {
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 1.4;
-    color: #d4d4d4;
+    color: #bebebe;
     margin-bottom: 30px; }
   .hero__link {
     display: inline; }
@@ -43,7 +43,7 @@
     font-size: 1.7rem;
     user-select: none; }
     .hero__btn:hover {
-      opacity: 0.8;
+      opacity: 0.9;
       transform: scale(1.07);
       box-shadow: 0px 10px 10px -10px #d10076; }
   .hero__figure {
@@ -64,7 +64,7 @@
 
 .section-why {
   margin-top: 120px;
-  background: #f3f4f6;
+  background: #151515;
   padding: 6rem 0; }
 
 .why {
@@ -72,7 +72,7 @@
   margin: 0 auto;
   padding: 0 30px;
   text-align: center;
-  color: #f0f0f0; }
+  color: #f5f5f7; }
   .why__title {
     font-size: 50px;
     font-weight: 500;
@@ -100,17 +100,17 @@
     line-height: 1.4;
     font-weight: 400;
     margin-bottom: 15px;
-    color: #d4d4d4; }
+    color: #bebebe; }
   .why__link {
     font-size: 18px;
-    color: #bb0a36;
+    color: #ff3164;
     transition: all .3s;
     margin-bottom: 10px; }
     .why__link:hover {
       text-decoration: underline; }
     .why__link::after {
       content: "";
-      border: solid #bb0a36;
+      border: solid #ff3164;
       border-width: 0 1.5px 1.5px 0;
       display: inline-block;
       padding: 3.5px;

@@ -1,13 +1,13 @@
 .section-footer {
   margin-top: 100px;
   padding: 30px 0 15px;
-  background-color: #f0f0f0; }
+  background-color: #141414; }
 
 .footer {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 30px;
-  color: #f0f0f0; }
+  color: #f5f5f7; }
   .footer__grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -16,29 +16,28 @@
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 20px;
-    color: #f0f0f0; }
+    color: #f5f5f7; }
   .footer-container-social__icons {
     display: flex;
     justify-content: space-between;
     align-items: center; }
   .footer .social-icon {
-    filter: grayscale(1);
     transition: all .2s;
     width: 35px;
-    height: 35px; }
+    height: 35px;
+    border-radius: 10px; }
     .footer .social-icon:hover {
-      filter: none;
       transform: scale(1.1); }
     .footer .social-icon__facebook {
-      background: url("../img/footer/icon-facebook.svg");
+      background: url("../img/footer/icon-facebook-dark.svg");
       width: 30px;
       height: 30px;
       background-size: cover; }
     .footer .social-icon__youtube {
-      background: url("../img/footer/icon-youtube.svg");
+      background: url("../img/footer/icon-youtube-dark.svg");
       background-size: cover; }
     .footer .social-icon__whatsapp {
-      background: url("../img/footer/icon-whatsapp.svg");
+      background: url("../img/footer/icon-whatsapp-dark.svg");
       background-size: cover; }
 
 .footer-container-nav a {
@@ -53,9 +52,11 @@
     font-size: 14px;
     font-weight: 400; }
   .footer-nav__link {
-    color: #515154; }
+    color: #a1a1a6;
+    transition: all .2s; }
     .footer-nav__link:hover {
-      text-decoration: underline; }
+      text-decoration: underline;
+      color: #f5f5f7; }
 
 .contacto-list {
   display: grid;
@@ -66,10 +67,10 @@
   .contacto-list__item {
     font-size: 14px;
     font-weight: 500;
-    color: #555555; }
+    color: #dadada; }
   .contacto-list__copy {
     font-size: 14px;
-    color: #515154; }
+    color: #a1a1a6; }
   .contacto-list__phone {
     display: block;
     margin-bottom: 8px; }
@@ -81,8 +82,8 @@
   font-size: 13px;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #f0f0f0;
-  color: #555555; }
+  border-top: 1px solid #343434;
+  color: #a1a1a6; }
 
 @media screen and (max-width: 1080px) {
   .section-footer {

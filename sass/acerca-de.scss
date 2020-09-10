@@ -163,7 +163,7 @@
     max-width: 70rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid rgb(52, 52, 52);
     margin-bottom: 30px;
 
     &__item {
@@ -190,7 +190,7 @@
             position: absolute;
             width: 100%;
             height: 2px;
-            background: #000;
+            background: rgb(255, 255, 255);
             top: calc(100% - 1px);
             left: 0;
             animation-name: opacidad;
@@ -295,13 +295,13 @@
     }
 
     &__item.active>.dotnav__link {
-        background: rgb(110, 110, 110);
+        background: rgb(230, 230, 230);
     }
 
     &__link {
         width: 10px;
         height: 10px;
-        background: rgb(197, 197, 197);
+        background: rgb(80, 80, 80);
         border-radius: 100%;
         position: relative;
         z-index: -1;

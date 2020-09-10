@@ -79,7 +79,7 @@
 // <!-------------- ESTILOS DE LA SECCION WHY -------------->
 .section-why {
     margin-top: 120px;
-    background: #f3f4f6;
+    background: rgb(21, 21, 21);
     padding: 6rem 0;
 }
 
@@ -132,7 +132,7 @@
 
     &__link {
         font-size: 18px;
-        color: #bb0a36;
+        color: #ff3164;
         transition: all .3s;
         margin-bottom: 10px;
 
@@ -142,7 +142,7 @@
 
         &::after {
             content: "";
-            border: solid #bb0a36;
+            border: solid #ff3164;
             border-width: 0 1.5px 1.5px 0;
             display: inline-block;
             padding: 3.5px;

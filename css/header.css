@@ -3,7 +3,7 @@ html {
   font-family: "Roboto", sans-serif; }
 
 body {
-  background: #363541; }
+  background: #111111; }
 
 a {
   display: block; }
@@ -66,7 +66,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #d4d4d4;
+    color: #bebebe;
     font-size: 16px;
     font-weight: 400;
     transition: all 300ms;
@@ -82,7 +82,7 @@ button {
       bottom: 0;
       transition: all .3s; }
     .main-nav__link:hover {
-      color: #eeeeee; }
+      color: #f0f0f0; }
       .main-nav__link:hover::after {
         transition: all .3s;
         width: 100%; }
@@ -105,7 +105,7 @@ button {
       margin: 0;
       padding: 0; }
     .main-nav__btn:hover {
-      opacity: 0.8;
+      opacity: 0.9;
       transform: scale(1.07);
       box-shadow: 0px 10px 10px -10px #d10076; }
 
@@ -125,7 +125,7 @@ button {
     height: 5.5rem;
     transition: background ease-in-out .3s; }
     .header.active {
-      background: #fff; }
+      background: #000; }
       .header.active .main-nav {
         position: relative; }
         .header.active .main-nav__list {
@@ -165,7 +165,7 @@ button {
       flex-direction: column;
       justify-content: start;
       width: 100%;
-      background: #fff;
+      background: #000;
       transition: all ease-in-out .4s;
       overflow: hidden;
       top: 55px; }
@@ -173,7 +173,7 @@ button {
         content: "";
         width: 100%;
         height: 1px;
-        background: #ebebeb;
+        background: #2a2a2a;
         position: absolute;
         top: 0; }
     .main-nav__item {
@@ -206,8 +206,8 @@ button {
     .mobile-menu .line {
       position: absolute;
       width: 3rem;
-      height: 2.4px;
-      background: #000;
+      height: 2.2px;
+      background: #fff;
       transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96); }
       .mobile-menu .line-bottom {
         margin-top: 18px; }
