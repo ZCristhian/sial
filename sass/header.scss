@@ -2,105 +2,131 @@
 @import "components/variables";
 @import "components/button";
 
-html{
+html {
     font-size: 10px;
     font-family: $global-font;
 }
-body{
+
+body {
     background: $body-color;
 }
-a{
+
+a {
     display: block;
 }
 
-.mobile-menu{
+button {
+    font-family: inherit;
+}
+
+/* ESTILOS PARA RESETEAR EL DE LOS NAVEGADORES */
+*,
+*::after,
+*::before {
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu {
     display: none;
 }
 
 // --------------ESTILOS DEL HEADER---------------//
-.header{
+.header {
     user-select: none;
     width: 100%;
     height: 75px;
     background: rgba($color: #fff, $alpha: 0.75);
     backdrop-filter: saturate(1.8) blur(20px);
     position: fixed;
-	z-index: 1000;
+    z-index: 1000;
     top: 0;
 }
 
 
-    // --------------ESTILOS DE LA NAVEGACION---------------//
-    .main-nav{
-        max-width: $width-size;
-        height: 100%;
-        margin: 0 auto;
-        padding: 0 $padding-size;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+// --------------ESTILOS DE LA NAVEGACION---------------//
+.main-nav {
+    max-width: $width-size;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 $padding-size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        &__logo{
-            width: 12rem;
-            user-select: none;
-        }
-
-        &__list{
-            width: 33rem;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        &__item{
-            height: 100%;
-            &--hidden{
-                display: none;
-            }
-        }
-        &__link{
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $paragraph-color;
-            font-size: 16px;
-            font-weight: 400;
-            transition: all 300ms;
-            position: relative;
-            user-select: none;
-            padding: 0 1px;
-            &::after{
-                content: ""	;
-                position: absolute;
-                width: 0;
-                height: 2.5px;
-                background: $gradient-btn;
-                bottom: 0;
-                transition: all .3s;
-            }
-            &:hover{
-                color: #333;
-                &::after{
-                    transition: all .3s;
-                    width: 100%;
-                }
-            }
-        }
-        // --------------ESTILOS DEL BOTON---------------//
-        &__btn{
-            @include styleBtn;
-            &--hidden{
-                display: none;
-                margin: 0;
-                padding: 0;
-            }
-            &:hover{
-            @include styleBtn-hover;
-            }
-        }
-        
+    &__logo {
+        width: 12rem;
+        user-select: none;
     }
 
+    &__list {
+        width: 33rem;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        height: 100%;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__link {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $paragraph-color;
+        font-size: 16px;
+        font-weight: 400;
+        transition: all 300ms;
+        position: relative;
+        user-select: none;
+        padding: 0 1px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2.5px;
+            background: $gradient-btn;
+            bottom: 0;
+            transition: all .3s;
+        }
+
+        &:hover {
+            color: #333;
+
+            &::after {
+                transition: all .3s;
+                width: 100%;
+            }
+        }
+    }
+
+    // --------------ESTILOS DEL BOTON---------------//
+    &__btn {
+        @include styleBtn;
+
+        &--hidden {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &:hover {
+            @include styleBtn-hover;
+        }
+    }
+
+}
 
 
 
@@ -112,79 +138,92 @@ a{
 
 
 
-// MEDIA QUERYS
-@media screen and (max-width: 1080px){
+
+// <!--------------------------------------- MEDIAQUERYS ------------------------------------->
+@media screen and (max-width: 1080px) {
     $padding-size: 20px;
     $width-size: 90rem;
 
-    .header{
+    .header {
         height: 6.5rem;
     }
 
-        .main-nav{
-            max-width: $width-size;
-            padding: 0 $padding-size;
-            &__logo{
-                width: 10rem;
-            }
-            &__list{
-                width: 31rem;
-            }
+    .main-nav {
+        max-width: $width-size;
+        padding: 0 $padding-size;
+
+        &__logo {
+            width: 10rem;
         }
+
+        &__list {
+            width: 31rem;
+        }
+    }
 }
 
-@media screen and (max-width: 767px){
+
+
+@media screen and (max-width: 767px) {
     $padding-size: 15px;
 
-    .header{
+    .header {
         height: 5.5rem;
         transition: background ease-in-out .3s;
 
-        &.active{
+        &.active {
             background: #fff;
-            .main-nav{
+
+            .main-nav {
                 position: relative;
-                &__list{
+
+                &__list {
                     height: 100vh;
                     opacity: 1;
                     visibility: visible;
                     padding-top: 50px;
                 }
-                &__item{
+
+                &__item {
                     animation-name: fadeIn;
                     animation-duration: 1s;
-                    
+
                 }
+
                 @keyframes fadeIn {
-                    from{
+                    from {
                         opacity: 0;
                     }
-                    to{
+
+                    to {
                         opacity: 1;
                     }
                 }
             }
 
-            .line-top{
+            .line-top {
                 margin-top: 0;
                 transform: rotate(45deg);
                 transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
             }
-            .line-medium{
+
+            .line-medium {
                 display: none;
                 transition: .1s;
             }
-            .line-bottom{
+
+            .line-bottom {
                 margin-top: 0;
                 transform: rotate(-45deg);
                 transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
             }
         }
     }
-    .main-nav{
+
+    .main-nav {
         padding: 0 $padding-size;
-        
-        &__list{
+
+        &__list {
             height: 0;
             visibility: hidden;
             position: fixed;
@@ -199,7 +238,8 @@ a{
             transition: all ease-in-out .4s;
             overflow: hidden;
             top: 55px;
-            &::after{
+
+            &::after {
                 content: "";
                 width: 100%;
                 height: 1px;
@@ -208,30 +248,35 @@ a{
                 top: 0;
             }
         }
-        &__item{
+
+        &__item {
             height: 60px;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-shrink: 0;
-            &--hidden{
+
+            &--hidden {
                 height: auto;
                 margin-top: 70px;
             }
         }
-        &__link{
+
+        &__link {
             font-size: 1.7rem;
-            &--large{
+
+            &--large {
                 display: none;
             }
-        &::after{
-            bottom: 20%;
-        }
+
+            &::after {
+                bottom: 20%;
+            }
         }
     }
 
-    .mobile-menu{
+    .mobile-menu {
         position: relative;
         width: 30px;
         height: 30px;
@@ -241,19 +286,23 @@ a{
         justify-content: center;
         cursor: pointer;
         overflow: visible;
-        .line{
+
+        .line {
             position: absolute;
-            width: 3rem; 
+            width: 3rem;
             height: 2.4px;
             background: #000;
             transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-            &-bottom{
+
+            &-bottom {
                 margin-top: 18px;
             }
-            &-medium{
+
+            &-medium {
                 margin-top: 2.9px;
             }
-            &-top{
+
+            &-top {
                 margin-top: -1.2rem;
             }
         }

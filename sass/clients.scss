@@ -23,7 +23,7 @@
 .main{
   padding-top: 175px;
 }
-
+// <!-------------- ESTILOS DEL HERO -------------->
 .hero{
   display: flex;
   max-width: $width-size;
@@ -55,6 +55,7 @@
     width: 460px;
   }
 }
+// <!-------------- ESTILOS DE LA SECCION CLIENTES -------------->
 .section-clients{
   padding-top: 100px;
 }
@@ -80,6 +81,9 @@
   }
 }
 
+
+
+// <!--------------------------------------- MEDIAQUERYS ------------------------------------->
 @media screen and (max-width: 1080px){
   $padding-size: 20px;
   $width-size: 90rem;
@@ -87,6 +91,7 @@
   .main{
     padding-top: 135px;
   }
+// <!-------------- ESTILOS DEL HERO -------------->
   .hero{
     max-width: $width-size;
     padding: 0 $padding-size;
@@ -101,7 +106,7 @@
       width: 380px;
     }
   }
-
+// <!-------------- ESTILOS DE LA SECCION CLIENTES -------------->
   .section-clients{
     padding-top: 60px;
   }
@@ -117,6 +122,7 @@
 }
 
 @media screen and (max-width: 870px){
+// <!-------------- ESTILOS DEL HERO -------------->
   .hero{
     max-width: 500px;
     flex-direction: column-reverse;
@@ -137,13 +143,14 @@
 
 @media screen and (max-width: 767px){
   $padding-size: 15px;
-
+// <!-------------- ESTILOS DEL HERO -------------->
   .hero{
     padding: 0 $padding-size;
   }
 }
 
 @media screen and (max-width: 794px){
+// <!-------------- ESTILOS DE LA SECCION CLIENTES -------------->
     .clients{
       &__list{
         grid-template-columns: 1fr;

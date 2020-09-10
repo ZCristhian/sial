@@ -8,6 +8,7 @@
     background-color: $footer-color;
 }
 
+// <!-------------- ESTILOS DEL FOOTER -------------->
 .footer {
     max-width: $width-size;
     margin: 0 auto;
@@ -27,6 +28,7 @@
         color: $title-color;
     }
 
+// <!-------------- ESTILOS DE LOS ICONOS-------------->
     &-container-social__icons {
         display: flex;
         justify-content: space-between;
@@ -69,7 +71,7 @@
         display: inline-block;
     }
 }
-
+// <!-------------- ESTILOS DE NAVEGACION DEL FOOTER -------------->
 .footer-nav {
     display: grid;
     grid-template-columns: 1fr;
@@ -89,7 +91,7 @@
         }
     }
 }
-
+// <!-------------- ESTILOS DE LA LISTA DE CONTACTO DE FOOTER -------------->
 .contacto-list {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -117,7 +119,7 @@
         }
     }
 }
-
+// <!-------------- ESTILOS DE COPYRIGHT -------------->
 .footer-copytight {
     text-align: center;
     font-size: 13px;
@@ -131,7 +133,7 @@
 
 
 
-/*************** MEDIA QUERYS ****************/
+// <!--------------------------------------- MEDIAQUERYS ------------------------------------->
 @media screen and (max-width: 1080px) {
     $padding-size: 20px;
     $width-size: 90rem;

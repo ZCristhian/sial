@@ -84,7 +84,6 @@
   border-top: 1px solid #1d1d1f;
   color: #555555; }
 
-/*************** MEDIA QUERYS ****************/
 @media screen and (max-width: 1080px) {
   .section-footer {
     margin-top: 60px; }
