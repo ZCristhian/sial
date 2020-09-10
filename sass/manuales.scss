@@ -4,21 +4,6 @@
 @import "components/variables";
 @import "components/button";
 
-.header{
-  .main-nav{
-      &__link{
-          &--manuales{
-              color: #000;
-
-              &::after{
-                  width: 100%;
-                  height: 4px;
-              }
-          }
-      }
-  }
-}
-
 .main{
   padding-top: 95px;
 
@@ -189,7 +174,7 @@
     position: relative;
 
     &:hover > img {
-      transform: scale(1.1);
+      transform: scale(1.1) translateY(-10px);
     }
   }
   &__image{

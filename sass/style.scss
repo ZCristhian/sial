@@ -5,21 +5,6 @@
 @import "components/variables";
 @import "components/button";
 
-.header {
-    .main-nav {
-        &__link {
-            &--home {
-                color: #000;
-
-                &::after {
-                    width: 100%;
-                    height: 4px;
-                }
-            }
-        }
-    }
-}
-
 // ESTILOS DEL HERO
 .main {
     padding-top: 215px;
@@ -177,48 +162,48 @@
         padding-top: 165px;
     }
 
-        .hero {
-            max-width: $width-size;
-            padding: 0 $padding-size;
-            grid-template-columns: 36rem minmax(440px, 1fr);
-            gap: 20px;
+    .hero {
+        max-width: $width-size;
+        padding: 0 $padding-size;
+        grid-template-columns: 36rem minmax(440px, 1fr);
+        gap: 20px;
 
-            &__title {
-                padding-top: 0;
-                font-size: 4.8rem;
-                margin-bottom: 10px;
-            }
-
-            &__copy {
-                font-size: 1.6rem;
-                line-height: 1.4;
-                margin-bottom: 20px;
-            }
-
-            &__background-circle {
-                top: -60px;
-            }
+        &__title {
+            padding-top: 0;
+            font-size: 4.8rem;
+            margin-bottom: 10px;
         }
 
-        .section-why {
-            margin-top: 90px;
+        &__copy {
+            font-size: 1.6rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
         }
 
-        .why {
-            max-width: $width-size;
-
-            &__list {
-                gap: 6.5rem;
-            }
-
-            &__title {
-                font-size: 38px;
-            }
-
-            &__subtitle {
-                font-size: 22px;
-            }
+        &__background-circle {
+            top: -60px;
         }
+    }
+
+    .section-why {
+        margin-top: 90px;
+    }
+
+    .why {
+        max-width: $width-size;
+
+        &__list {
+            gap: 6.5rem;
+        }
+
+        &__title {
+            font-size: 38px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
+    }
 }
 
 @media screen and (max-width: 870px) {
@@ -226,65 +211,65 @@
         padding-top: 135px;
     }
 
-        .hero {
-            width: 600px;
+    .hero {
+        width: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 50px;
+        grid-template-areas:
+            "hero-image"
+            "hero-wrapper"
+        ;
+        text-align: center;
+
+        &__background-circle {
+            top: -70px;
+        }
+
+        &__btn {
+            margin: 0 auto;
+        }
+    }
+
+    .why {
+        max-width: 600px;
+
+        &__list {
             grid-template-columns: 1fr;
-            grid-template-rows: auto 1fr;
-            grid-gap: 50px;
-            grid-template-areas:
-                "hero-image"
-                "hero-wrapper"
-            ;
-            text-align: center;
-
-            &__background-circle {
-                top: -70px;
-            }
-
-            &__btn {
-                margin: 0 auto;
-            }
+            gap: 5rem;
+            grid-template-rows: auto auto auto;
         }
-
-        .why {
-            max-width: 600px;
-
-            &__list {
-                grid-template-columns: 1fr;
-                gap: 5rem;
-                grid-template-rows: auto auto auto;
-            }
-        }
+    }
 }
 
 @media screen and (max-width: 767px) {
     $padding-size: 15px;
 
 
-        .hero,
-        .why {
-            padding: 0 $padding-size;
-        }
+    .hero,
+    .why {
+        padding: 0 $padding-size;
+    }
 
-        .hero {
-            &__copy {
-                font-size: 17px;
-            }
+    .hero {
+        &__copy {
+            font-size: 17px;
         }
+    }
 
-        .section-why {
-            margin-top: 65px;
-        }
+    .section-why {
+        margin-top: 65px;
+    }
 }
 
 @media screen and (max-width: 600px) {
 
-        .hero {
-            width: 100%;
+    .hero {
+        width: 100%;
 
-            &__background-circle {
-                top: -25%;
-            }
+        &__background-circle {
+            top: -25%;
         }
+    }
 
 }

@@ -7,7 +7,7 @@
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 30px;
-  color: #1d1d1f; }
+  color: #f0f0f0; }
   .footer__grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -16,7 +16,7 @@
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 20px;
-    color: #1d1d1f; }
+    color: #f0f0f0; }
   .footer-container-social__icons {
     display: flex;
     justify-content: space-between;
@@ -81,7 +81,7 @@
   font-size: 13px;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #1d1d1f;
+  border-top: 1px solid #f0f0f0;
   color: #555555; }
 
 @media screen and (max-width: 1080px) {
