@@ -5,253 +5,286 @@
 @import "components/variables";
 @import "components/button";
 
+.header {
+    .main-nav {
+        &__link {
+            &--home {
+                color: #000;
 
-
-// ESTILOS DEL HERO
-.main{
-    padding-top: 215px;
-
-    .hero{
-        max-width: $width-size;
-        margin: 0 auto;
-        padding: 0 $padding-size;
-        display: grid;
-        grid-template-columns: 430px minmax(560px, 1fr);
-        gap: 30px;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "hero-wrapper hero-image"
-        ;
-        &__wrapper{
-            grid-area: hero-wrapper;
-        }
-        &__title{
-            padding-top: 20px;
-            margin-bottom: 12px;
-            font-size: $h1-fontSize;
-            font-weight: 600;
-            color: $title-color;
-        }
-        &__copy{
-            font-weight: 400;
-            font-size: 1.7rem;
-            line-height: 1.4;
-            color: $paragraph-color;
-            margin-bottom: 30px;
-        }
-        &__link{
-            display: inline;
-        }
-        &__btn{
-            @include styleBtn;
-
-            &:hover{
-                @include styleBtn-hover;
+                &::after {
+                    width: 100%;
+                    height: 4px;
+                }
             }
         }
-        &__figure{
-            position: relative;
-            grid-area: hero-image;
+    }
+}
+
+// ESTILOS DEL HERO
+.main {
+    padding-top: 215px;
+}
+
+.hero {
+    max-width: $width-size;
+    margin: 0 auto;
+    padding: 0 $padding-size;
+    display: grid;
+    grid-template-columns: 430px minmax(560px, 1fr);
+    gap: 30px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "hero-wrapper hero-image"
+    ;
+
+    &__wrapper {
+        grid-area: hero-wrapper;
+    }
+
+    &__title {
+        padding-top: 20px;
+        margin-bottom: 12px;
+        font-size: $h1-fontSize;
+        font-weight: 600;
+        color: $title-color;
+    }
+
+    &__copy {
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 1.4;
+        color: $paragraph-color;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        display: inline;
+    }
+
+    &__btn {
+        @include styleBtn;
+
+        &:hover {
+            @include styleBtn-hover;
         }
-        &__background-circle{
-            position: absolute;
-            width: 102%;
-            height: 140%;
-            background: url('.././img/inicio/bgr-circle.svg') center no-repeat;
-            background-size: 100% 100%;
-            z-index: -1;
-            top: -82px;
-            left: -10px;
-        }
-        &__image{
-            user-select: none;
-            width: 100%;
-        }
+    }
+
+    &__figure {
+        position: relative;
+        grid-area: hero-image;
+    }
+
+    &__background-circle {
+        position: absolute;
+        width: 102%;
+        height: 140%;
+        background: url('.././img/inicio/bgr-circle.svg') center no-repeat;
+        background-size: 100% 100%;
+        z-index: -1;
+        top: -82px;
+        left: -10px;
+    }
+
+    &__image {
+        user-select: none;
+        width: 100%;
     }
 }
 
 // <!-------------- ESTILOS DE LA SECCION WHY -------------->
-.main{
-    .section-why{
-        margin-top: 120px;
-        background: hsl(220, 16%, 96%);
-        padding: 6rem 0;
-    }
-    .why{
-        max-width: $width-size;
-        margin: 0 auto;
-        padding: 0 $padding-size;
-        text-align: center;
-        color: $title-color;
-
-        &__title{
-            font-size: $h2-fontsize;
-            font-weight: 500;
-            margin-bottom: 40px;
-        }
-        &__list{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            gap: 8rem;
-        }
-        &__item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-        &__image{
-            width: 150px;
-            height: 150px;
-            margin-bottom: 15px;
-        }
-        &__subtitle{
-            font-size: $h3-fontsize;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-        &__subcopy{
-            font-size: 17px;
-            line-height: 1.4;
-            font-weight: 400;
-            margin-bottom: 15px;
-            color: $paragraph-color;
-        }
-        &__link{
-            font-size: 18px;
-            color: #bb0a36;
-            transition: all .3s;
-            margin-bottom: 10px;
-            &:hover{
-                text-decoration: underline;
-            }
-            &::after{
-                content: "";
-                border: solid #bb0a36;
-                border-width: 0 1.5px 1.5px 0;
-                display: inline-block;
-                padding: 3.5px;
-                transform: rotate(-45deg);
-                margin-left: 3px;
-            }
-        }
-    }
-
+.section-why {
+    margin-top: 120px;
+    background: #f3f4f6;
+    padding: 6rem 0;
 }
 
+.why {
+    max-width: $width-size;
+    margin: 0 auto;
+    padding: 0 $padding-size;
+    text-align: center;
+    color: $title-color;
+
+    &__title {
+        font-size: $h2-fontsize;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 8rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    &__subtitle {
+        font-size: $h3-fontsize;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    &__subcopy {
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-bottom: 15px;
+        color: $paragraph-color;
+    }
+
+    &__link {
+        font-size: 18px;
+        color: #bb0a36;
+        transition: all .3s;
+        margin-bottom: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after {
+            content: "";
+            border: solid #bb0a36;
+            border-width: 0 1.5px 1.5px 0;
+            display: inline-block;
+            padding: 3.5px;
+            transform: rotate(-45deg);
+            margin-left: 3px;
+        }
+    }
+}
+
+
 /*************** MEDIA QUERYS ****************/
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1080px) {
     $padding-size: 20px;
     $width-size: 90rem;
 
-    .main{
+    .main {
         padding-top: 165px;
-        .hero{
+    }
+
+        .hero {
             max-width: $width-size;
             padding: 0 $padding-size;
             grid-template-columns: 36rem minmax(440px, 1fr);
             gap: 20px;
 
-            &__title{
+            &__title {
                 padding-top: 0;
                 font-size: 4.8rem;
                 margin-bottom: 10px;
             }
-            &__copy{
+
+            &__copy {
                 font-size: 1.6rem;
                 line-height: 1.4;
                 margin-bottom: 20px;
             }
-            &__background-circle{
+
+            &__background-circle {
                 top: -60px;
             }
         }
-    }
 
-    .main{
-        .section-why{
+        .section-why {
             margin-top: 90px;
         }
-        .why{
+
+        .why {
             max-width: $width-size;
-            &__list{
+
+            &__list {
                 gap: 6.5rem;
             }
-            &__title{
+
+            &__title {
                 font-size: 38px;
             }
-            &__subtitle{
+
+            &__subtitle {
                 font-size: 22px;
             }
         }
-    }
 }
 
-@media screen and (max-width: 870px){
-    .main{
+@media screen and (max-width: 870px) {
+    .main {
         padding-top: 135px;
+    }
 
-        .hero{
+        .hero {
             width: 600px;
             grid-template-columns: 1fr;
             grid-template-rows: auto 1fr;
             grid-gap: 50px;
-            grid-template-areas: 
-            "hero-image"
-            "hero-wrapper"
+            grid-template-areas:
+                "hero-image"
+                "hero-wrapper"
             ;
             text-align: center;
 
-            &__background-circle{
+            &__background-circle {
                 top: -70px;
             }
-            &__btn{
+
+            &__btn {
                 margin: 0 auto;
             }
         }
-    }
 
-    .main{
-        .why{
+        .why {
             max-width: 600px;
-            &__list{
+
+            &__list {
                 grid-template-columns: 1fr;
                 gap: 5rem;
                 grid-template-rows: auto auto auto;
             }
         }
-    }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     $padding-size: 15px;
 
-    .main{
-        .hero , .why{
+
+        .hero,
+        .why {
             padding: 0 $padding-size;
         }
-        .hero{
-            &__copy{
+
+        .hero {
+            &__copy {
                 font-size: 17px;
             }
         }
-        .section-why{
+
+        .section-why {
             margin-top: 65px;
         }
-    }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
 
-    .main{
-        .hero{
+        .hero {
             width: 100%;
 
-            &__background-circle{
+            &__background-circle {
                 top: -25%;
             }
         }
-    }
 
 }

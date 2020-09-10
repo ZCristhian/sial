@@ -63,6 +63,86 @@ body {
     color: #8e8e90;
     line-height: 1.4; }
 
+.section-contact {
+  margin-top: 100px;
+  padding: 0 30px; }
+
+.contact {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 12px 18px -6px rgba(34, 56, 101, 0.12);
+  border-radius: 20px;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: auto 1fr; }
+  .contact__header {
+    max-width: 320px;
+    padding: 20px 40px 20px 20px; }
+  .contact__image {
+    width: 140px;
+    display: block;
+    margin: 0 auto; }
+  .contact__wrapper {
+    text-align: center; }
+  .contact__title {
+    font-size: 2rem;
+    margin-top: 12px; }
+  .contact__copy {
+    font-size: 1.6rem;
+    color: #555;
+    margin-top: 6px; }
+  .contact__body {
+    padding: 20px;
+    padding-left: 40px;
+    border-left: 2px solid #e7e7e7; }
+  .contact__subtitle {
+    font-size: 2rem; }
+  .contact__list {
+    margin: 20px 0 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 15px;
+    column-gap: 25px; }
+  .contact__item {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #ff3370; }
+    .contact__item-copy {
+      font-size: 16px;
+      color: #555; }
+  .contact__phone {
+    display: block;
+    margin-bottom: 8px; }
+    .contact__phone:last-child {
+      margin: 0; }
+  .contact__social {
+    margin: 50px 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 190px; }
+    .contact__social-icon {
+      filter: grayscale(1);
+      transition: all .2s;
+      width: 40px;
+      height: 40px;
+      background-size: cover; }
+      .contact__social-icon:hover {
+        transform: scale(1.1);
+        filter: grayscale(0); }
+      .contact__social-icon:nth-child(1) {
+        background: url("../img/footer/icon-facebook.svg");
+        width: 35px;
+        height: 35px; }
+      .contact__social-icon:nth-child(2) {
+        background: url("../img/footer/icon-youtube.svg"); }
+      .contact__social-icon:nth-child(3) {
+        background: url("../img/footer/icon-whatsapp.svg");
+        background-size: cover; }
+
 @media screen and (max-width: 1080px) {
   .main {
     padding-top: 65px; }

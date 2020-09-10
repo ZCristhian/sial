@@ -1,5 +1,11 @@
 @import url("header.css");
 @import url("footer.css");
+.header .main-nav__link--clients {
+  color: #000; }
+  .header .main-nav__link--clients::after {
+    width: 100%;
+    height: 4px; }
+
 .main {
   padding-top: 175px; }
 

@@ -5,332 +5,386 @@
 @import "components/variables";
 @import "components/button";
 
-// <!-------------- ESTILOS DEL HERO -------------->
-.main{
-    padding-top: 175px;
-    .about-hero{
-        max-width: $width-size;
-        margin: 0 auto;
-        padding: 0 $padding-size;
-        display: flex;
-        justify-content: space-between;
+.header {
+    .main-nav {
+        &__link {
+            &--about {
+                color: #000;
 
-        &__figure{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+                &::after {
+                    width: 100%;
+                    height: 4px;
+                }
+            }
         }
-        &__image{
-            max-height: 320px;
+    }
+}
+
+// <!-------------- ESTILOS DEL HERO -------------->
+.main {
+    padding-top: 175px;
+}
+
+.about-hero {
+    max-width: $width-size;
+    margin: 0 auto;
+    padding: 0 $padding-size;
+    display: flex;
+    justify-content: space-between;
+
+    &__figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        max-height: 320px;
+    }
+
+    &__wrapper {
+        margin-left: 30px;
+    }
+
+    &__title {
+        font-size: 6rem;
+        font-weight: 600;
+        padding-top: 20px;
+        margin-bottom: 12px;
+        color: $title-color;
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 12px;
+        color: $title-color;
+    }
+
+    &__copy {
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 1.4;
+        color: $paragraph-color;
+    }
+}
+
+// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+.section-modules {
+    padding-top: 100px;
+}
+
+.container-modules {
+    background: $background-stack;
+    border-radius: 25px;
+    width: 95%;
+    max-width: $width-size;
+    margin: 0 auto;
+    padding: 50px 20px 20px;
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 5rem;
+        text-align: center;
+        color: $title-color;
+    }
+}
+
+.modules {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 40px;
+    grid-template-areas:
+        "abastecimiento abastecimiento almacen almacen combustible combustible"
+        "caja caja caja reportes reportes reportes";
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        &--abastecimiento {
+            grid-area: abastecimiento;
         }
-        &__wrapper{
-            margin-left: 30px;
+
+        &--almacen {
+            grid-area: almacen;
         }
-        &__title{
-            font-size: 6rem;
-            font-weight: 600;
-            padding-top: 20px;
-            margin-bottom: 12px;
+
+        &--combustible {
+            grid-area: combustible;
+        }
+
+        &--caja {
+            grid-area: caja;
+        }
+
+        &--reportes {
+            grid-area: reportes;
+        }
+    }
+
+    &__image {
+        width: 200px;
+        height: 200px;
+    }
+
+    &__title {
+        font-size: 3rem;
+        margin-top: 15px;
+        text-align: center;
+        color: $title-color;
+        line-height: 1;
+        height: 80px;
+    }
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    .feature-item {
+        max-width: 250px;
+        font-size: 17px;
+        color: $paragraph-color;
+    }
+}
+
+// <!-------------- ESTILOS DE LA SECCION CONECCTIONS -------------->
+.section-conections {
+    padding-top: 100px;
+}
+
+.conections {
+    max-width: $width-size;
+    padding: 0 $padding-size;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        font-size: 5rem;
+        margin-bottom: 30px;
+        color: $title-color;
+    }
+}
+
+// <!-------------- ESTILOS DEL TABNAV -------------->
+
+.tabnav {
+    margin: 0 auto;
+    max-width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cacaca;
+    margin-bottom: 30px;
+
+    &__item {
+        font-size: 18rem;
+        cursor: pointer;
+        padding: 10px 0;
+        user-select: none;
+        transition: all .5s;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:nth-child(1)>.tabnav__link,
+        &:nth-child(5)>.tabnav__link {
+            width: 55px;
+        }
+
+        &:nth-child(2)>.tabnav__link {
+            width: 60px;
+        }
+
+        &.active::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            top: calc(100% - 1px);
+            left: 0;
+            animation-name: opacidad;
+            animation-duration: .5s;
+        }
+    }
+
+    &__link {
+        position: relative;
+        z-index: -100;
+        width: 70px;
+    }
+
+}
+
+// <!-------------- ESTILOS DELOS PANELES -------------->
+.panels {
+    min-height: 120px;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @keyframes movimiento {
+        0% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes opacidad {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    &__item {
+        min-height: 310px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        left: -1000%;
+
+        &.active {
+            animation-name: movimiento, opacidad;
+            animation-duration: .5s, .5s;
+            position: relative;
+            left: 0;
+        }
+
+        &>img {
+            height: 150px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        &:nth-child(2)>img {
+            width: 400px;
+        }
+
+        &:nth-child(1)>img {
+            width: 140px;
+        }
+
+        &:nth-child(5)>img {
+            width: 300px;
+            height: auto;
+        }
+
+        h3 {
+            font-size: 2.8rem;
+            margin-bottom: 6px;
             color: $title-color;
         }
-        &__subtitle{
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 12px;
-            color: $title-color;
-        }
-        &__copy{
-            font-weight: 400;
+
+        p {
             font-size: 1.7rem;
-            line-height: 1.4;
             color: $paragraph-color;
         }
     }
 }
-// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
-.main{
-    .section-modules{
-        padding-top: 100px;
 
-        .container-modules{
-            background: $background-stack;
-            border-radius: 25px;
-            width: 95%;
-            max-width: $width-size;
-            margin: 0 auto;
-            padding: 50px 20px 20px;
-            
-            &__title{
-                margin-bottom: 40px;
-                font-size: 5rem;
-                text-align: center;
-                color: $title-color;
-            }
-            .modules{
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: repeat(2, auto);
-                grid-gap: 40px;
-                grid-template-areas:
-                "abastecimiento abastecimiento almacen almacen combustible combustible"
-                "caja caja caja reportes reportes reportes";
-
-                &__item{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 20px;
-
-                    &--abastecimiento{
-                        grid-area: abastecimiento;
-                    }
-                    &--almacen{
-                        grid-area: almacen;
-                    }
-                    &--combustible{
-                        grid-area: combustible;
-                    }
-                    &--caja{
-                        grid-area: caja;
-                    }
-                    &--reportes{
-                        grid-area: reportes;
-                    }
-                }
-
-                &__image{
-                    width: 200px;
-                    height: 200px;
-                }
-                &__title{
-                    font-size: 3rem;
-                    margin-top: 15px;
-                    text-align: center;
-                    color: $title-color;
-                    line-height: 1;
-                    height: 80px;
-                }
-                .feature-list{
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    grid-gap: 20px;
-
-                    .feature-item{
-                        max-width: 250px;
-                        font-size: 17px;
-                        color: $paragraph-color;
-                    }
-                }
-            }
-        }
-    }
-}
-// <!-------------- ESTILOS DE LA SECCION CONECCTIONS -------------->
-.main{
-    .section-conections{
-        padding-top: 100px;
-        .conections{
-            max-width: $width-size;
-            padding: 0 $padding-size;
-            margin: 0 auto;
-            text-align: center;
-
-            &__title{
-                font-size: 5rem;
-                margin-bottom: 30px;
-                color: $title-color;
-            }
-// <!-------------- ESTILOS DEL TABNAV -------------->
-
-            .tabnav{
-                margin: 0 auto;
-                max-width: 70rem;
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 1px solid #cacaca;
-                margin-bottom: 30px;
-                
-                &__item{
-                    font-size: 18rem;
-                    cursor: pointer;
-                    padding: 10px 0;
-                    user-select: none;
-                    transition: all .5s;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    &:nth-child(1) > .tabnav__link, &:nth-child(5) > .tabnav__link{
-                        width: 55px;
-                    }
-                    &:nth-child(2) > .tabnav__link{
-                        width: 60px;
-                    }
-                    &.active::after{
-                        content: "";
-                        position: absolute;
-                        width: 100%;
-                        height: 2px;
-                        background: #000;
-                        top: calc(100% - 1px);
-                        left: 0;
-                        animation-name: opacidad;
-                        animation-duration: .5s;
-                    }
-                }
-                &__link{
-                    position: relative;
-                    z-index: -100;
-                    width: 70px;
-                }
-                
-            }
-// <!-------------- ESTILOS DELOS PANELES -------------->
-            .panels{
-                min-height: 120px;
-                max-width: 70rem;
-                margin: 0 auto;
-
-                @keyframes movimiento{
-                    0%{
-                        transform: translateY(10px);
-                    }
-                    100%{
-                        transform: translateY(0);
-                    }
-                }
-                @keyframes opacidad{
-                    0%{
-                        opacity: 0;
-                    }
-                    100%{
-                        opacity: 1;
-                    }
-                }
-                &__item{
-                    min-height: 310px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    position: absolute;
-                    left: -1000%;
-
-                    &.active{
-                        animation-name: movimiento, opacidad;
-                        animation-duration: .5s, .5s;
-                        position: relative;
-                        left: 0;
-                    }
-                    
-                    & > img {
-                         height: 150px;
-                         width: auto;
-                         margin-bottom: 20px;
-                    }
-                    &:nth-child(2) > img{
-                        width: 400px;
-                    }
-                    &:nth-child(1) > img{
-                        width: 140px;
-                    }
-                    &:nth-child(5) > img{
-                        width: 300px;
-                        height: auto;
-                    }
-                    h3{
-                        font-size: 2.8rem;
-                        margin-bottom: 6px;
-                        color: $title-color;
-                    }
-                    p{
-                        font-size: 1.7rem;
-                        color: $paragraph-color;
-                    }
-                }
-            }
 // <!-------------- ESTILOS DE LAS CONEXIONES-MIN (DOTNAV) -------------->
-            .dotnav{
-                display: none;
-                margin-top: 5px;
+.dotnav {
+    display: none;
+    margin-top: 5px;
 
-                &__list{
-                    display: flex;
-                    margin: 0 auto;
-                    max-width: 14rem;
-                    justify-content: space-between;
-                }
-                &__item.active > .dotnav__link{
-                    background: rgb(110, 110, 110);
-                }
-                &__link{
-                    width: 10px;
-                    height: 10px;
-                    background: rgb(197, 197, 197);
-                    border-radius: 100%;
-                    position: relative;
-                    z-index: -1;
-                    margin: 10px;
-                }
-            }
-        }
-    }
-// <!-------------- ESTILOS DE LA SECCION SECURITY -------------->
-    .section-security{
-        padding-top: 100px;
-
-        .security{
-            max-width: $width-size;
-            padding: 0 $padding-size;
-            margin: 0 auto;
-            text-align: center;
-
-            &__title{
-                color: $title-color;
-                font-size: 5rem;
-                margin-bottom: 25px;
-            }
-            &__image{
-                max-width: 400px;
-                margin-bottom: 20px;
-            }
-            &__copy{
-                color: $paragraph-color;
-                font-size: 1.7rem;
-                display: block;
-            }
-        }
-    }
-// <!-------------- ESTILOS DE INTERNET -------------->
-    .section-internet{
-        padding-top: 100px;
-
-        .internet{
-            max-width: $width-size;
-            padding: 0 8%;
-            margin: 0 auto;
-            text-align: center;
-
-            &__title{
-                font-size: 3.2rem;
-                color: $title-color;
-                margin-bottom: 20px;
-            }
-            &__copy{
-                font-size: 17px;
-                color: $paragraph-color;
-            }
-            [class*="lan__copy"]{
-                display: block;
-                margin-bottom: 10px;
-            }
-            .lan__copy--4{
-                margin-bottom: 0;
-            }
-        }
+    &__list {
+        display: flex;
+        margin: 0 auto;
+        max-width: 14rem;
+        justify-content: space-between;
     }
 
+    &__item.active>.dotnav__link {
+        background: rgb(110, 110, 110);
+    }
+
+    &__link {
+        width: 10px;
+        height: 10px;
+        background: rgb(197, 197, 197);
+        border-radius: 100%;
+        position: relative;
+        z-index: -1;
+        margin: 10px;
+    }
 }
+
+// <!-------------- ESTILOS DE LA SECCION SECURITY -------------->
+.section-security {
+    padding-top: 100px;
+}
+
+.security {
+    max-width: $width-size;
+    padding: 0 $padding-size;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        color: $title-color;
+        font-size: 5rem;
+        margin-bottom: 25px;
+    }
+
+    &__image {
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    &__copy {
+        color: $paragraph-color;
+        font-size: 1.7rem;
+        display: block;
+    }
+}
+
+// <!-------------- ESTILOS DE INTERNET -------------->
+.section-internet {
+    padding-top: 100px;
+}
+
+
+.internet {
+    max-width: $width-size;
+    padding: 0 8%;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        font-size: 3.2rem;
+        color: $title-color;
+        margin-bottom: 20px;
+    }
+
+    &__copy {
+        font-size: 17px;
+        color: $paragraph-color;
+    }
+
+    [class*="lan__copy"] {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .lan__copy--4 {
+        margin-bottom: 0;
+    }
+}
+
 
 
 
@@ -339,284 +393,254 @@
 
 
 // <!--------------------------------------- MEDIAQUERYS ------------------------------------->
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1080px) {
     $padding-size: 20px;
     $width-size: 90rem;
 
-// <!-------------- ESTILOS DEL HERO -------------->
-    .main{
+    // <!-------------- ESTILOS DEL HERO -------------->
+    .main {
         padding-top: 135px;
+    }
 
-        .about-hero{
-            max-width: $width-size;
-            padding: 0 $padding-size;
 
-            &__image{
-                max-width: 490px;
-            }
-            &__title{
-                padding-top: 0;
-                font-size: 4.8rem;
-                margin-bottom: 8px;
-            }
-            &__subtitle{
-                font-size: 18px;
-                margin-bottom: 8px;
-            }
+    .about-hero {
+        max-width: $width-size;
+        padding: 0 $padding-size;
+
+        &__image {
+            max-width: 490px;
+        }
+
+        &__title {
+            padding-top: 0;
+            font-size: 4.8rem;
+            margin-bottom: 8px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+            margin-bottom: 8px;
         }
     }
-// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
-    .main{
-        .section-modules{
-            padding-top: 60px;
 
-            .container-modules{
-                max-width: $width-size;
-                padding-top: 40px;
+    // <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+    .section-modules {
+        padding-top: 60px;
+    }
 
-                &__title{
-                    font-size: 38px;
-                }
 
-                .modules{
+    .container-modules {
+        max-width: $width-size;
+        padding-top: 40px;
 
-                    &__title{
-                        font-size: 22px;
-                        height: 65px;
-                    }
-                    &__item{
-                        padding: 10px;
-                    }
-                }
-            }
+        &__title {
+            font-size: 38px;
         }
     }
-// <!-------------- ESTILOS DE LAS CONECCTIONS -------------->
-    .main{
-        .section-conections{
-            padding-top: 60px;
 
-            .conections{
-                max-width: $width-size;
-                padding: 0 $padding-size;
+    .modules {
 
-                &__title{
-                    font-size: 3.8rem;
-                }
-            }
+        &__title {
+            font-size: 22px;
+            height: 65px;
+        }
+
+        &__item {
+            padding: 10px;
         }
     }
-// <!-------------- ESTILOS DE SECURITY -------------->
-    .main{
-        .section-security{
-            padding-top: 60px;
 
-            .security{
-                max-width: $width-size;
-                padding: 0 $padding-size;
+    // <!-------------- ESTILOS DE LAS CONECCTIONS -------------->
+    .section-conections {
+        padding-top: 60px;
+    }
 
-                &__title{
-                    font-size: 3.8rem;
-                }
-            }
+    .conections {
+        max-width: $width-size;
+        padding: 0 $padding-size;
+
+        &__title {
+            font-size: 3.8rem;
         }
     }
-// <!-------------- ESTILOS DE INTERNET -------------->
-    .main{
-        .section-internet{
-            padding-top: 60px;
 
-            .internet{
-                max-width: $width-size;
-                padding: $padding-size;
+    // <!-------------- ESTILOS DE SECURITY -------------->
+    .section-security {
+        padding-top: 60px;
+    }
 
-                &__title{
-                    font-size: 28px;
-                }
-            }
+    .security {
+        max-width: $width-size;
+        padding: 0 $padding-size;
+
+        &__title {
+            font-size: 3.8rem;
+        }
+    }
+
+    // <!-------------- ESTILOS DE INTERNET -------------->
+    .section-internet {
+        padding-top: 60px;
+    }
+
+    .internet {
+        max-width: $width-size;
+        padding: $padding-size;
+
+        &__title {
+            font-size: 28px;
         }
     }
 
 }
-@media screen and (max-width: 870px){
 
-// <!-------------- ESTILOS DEL HERO -------------->
-    .main{
-        .about-hero{
-            max-width: 600px;
-            flex-direction: column;
+@media screen and (max-width: 870px) {
 
-            &__image{
-                max-height: 280px;
-            }
-            &__wrapper{
-                margin: 20px 0 0;
-                text-align: center;
-                padding: 0 40px;
-            }
+    // <!-------------- ESTILOS DEL HERO -------------->
+    .about-hero {
+        max-width: 600px;
+        flex-direction: column;
+
+        &__image {
+            max-height: 280px;
+        }
+
+        &__wrapper {
+            margin: 20px 0 0;
+            text-align: center;
+            padding: 0 40px;
         }
     }
-// <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
-    .main{
-        .section-modules{
-            .container-modules{
-                .modules{
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(3, auto);
-                    grid-template-areas: 
-                    "abastecimiento almacen"
-                    "combustible caja"
-                    "reportes reportes";
-                }
-            }
-        }
+
+    // <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
+    .modules {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "abastecimiento almacen"
+            "combustible caja"
+            "reportes reportes";
     }
 }
-@media screen and (max-width: 767px){
+
+@media screen and (max-width: 767px) {
     $padding-size: 15px;
 
-// <!-------------- ESTILOS DEL HERO -------------->
-    .main{
+    // <!-------------- ESTILOS DEL HERO -------------->
+    .main {
         padding-top: 125px;
-
-        .about-hero{
-            padding: 0 $padding-size;
-        }
-
     }
-// <!-------------- ESTILOS DE LAS CONEXIONES -------------->
-    .main{
-        .section-conections{
-            .conections{
-                padding: 0 $padding-size;
 
-                &__title{
-                    font-size: 3.8rem;
-                }
-            }
-        }
+    .about-hero {
+        padding: 0 $padding-size;
     }
-// <!-------------- ESTILOS DE SECURITY -------------->
-    .main{
-        .section-security{
-            .security{
-                padding: 0 $padding-size;
-            }
-        }
-    }
-// <!-------------- ESTILOS DE INTERNET -------------->
-    .main{
-        .section-internet{
-            .internet{
-                padding: $padding-size;
-            }
+
+    // <!-------------- ESTILOS DE LAS CONEXIONES -------------->
+    .conections {
+        padding: 0 $padding-size;
+
+        &__title {
+            font-size: 3.8rem;
         }
     }
 
-}
-@media screen and (max-width: 560px){
-
-// <!-------------- ESTILOS DEL HERO -------------->
-    .main{
-        .about-hero{
-            &__figure{
-                width: 100%;
-            }
-            &__image{
-                width: 100%;
-                height: auto;
-                max-width: 500px;
-                max-height: initial;
-            }
-            &__wrapper{
-                padding: 0;
-            }
-        }
-    }
-// <!-------------- ESTILOS DEL HERO -------------->
-    .main{
-        .section-modules{
-            .container-modules{
-                .modules__item{
-                    .feature-list{
-                        row-gap: 10px;
-                    }
-                }
-            }
-        }
-    }
-// <!-------------- ESTILOS DE LAS CONECCTIONS -------------->
-    .main{
-        .section-conections{
-            .conections{
-                .dotnav{
-                    display: block;
-                }
-                .tabnav{
-                    display: none;
-                }
-                .panels{
-                    &__item{
-                        min-height: 260px;
-
-                        & > img {
-                            height: 100px;
-                            width: auto;
-                            margin-bottom: 20px;
-                       }
-                       &:nth-child(2) > img{
-                           width: 260px;
-                       }
-                       &:nth-child(1) > img{
-                           width: 100px;
-                       }
-                       &:nth-child(5) > img{
-                           width: 240px;
-                       }
-                    }
-                }
-            }
-        }
+    // <!-------------- ESTILOS DE SECURITY -------------->
+    .security {
+        padding: 0 $padding-size;
     }
 
-// <!-------------- ESTILOS DE LOS MODULOS -------------->
-    .main{
-        .section-modules{
-            .container-modules{
-                .modules{
-                    &__title{
-                        height: auto;
-                        margin-bottom: 15px;   
-                    }
-
-                    grid-template-columns: 1fr;
-                    grid-template-rows: repeat(4, auto);
-                    grid-template-areas: 
-                    "abastecimiento"
-                    "almacen"
-                    "combustible"
-                    "caja"
-                    "reportes";
-                    grid-gap: 30px;
-                }
-            }
-        }
+    // <!-------------- ESTILOS DE INTERNET -------------->
+    .internet {
+        padding: $padding-size;
     }
 
 }
 
-@media screen and (max-width: 406px){
-// <!-------------- ESTILOS DE CONECCTIONS -------------->
-    .main{
-        .section-conections{
-            .conections{
-                .panels{
+@media screen and (max-width: 560px) {
 
-                    &__item{
-                        min-height: 285px;
-                    }
-                }
+    // <!-------------- ESTILOS DEL HERO -------------->
+    .about-hero {
+        &__figure {
+            width: 100%;
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            max-height: initial;
+        }
+
+        &__wrapper {
+            padding: 0;
+        }
+    }
+
+    // <!-------------- ESTILOS DEL HERO -------------->
+    .feature-list {
+        row-gap: 10px;
+    }
+
+    // <!-------------- ESTILOS DE LAS CONECCTIONS -------------->
+    .dotnav {
+        display: block;
+    }
+
+    .tabnav {
+        display: none;
+    }
+
+    .panels {
+        &__item {
+            min-height: 260px;
+
+            &>img {
+                height: 100px;
+                width: auto;
+                margin-bottom: 20px;
+            }
+
+            &:nth-child(2)>img {
+                width: 260px;
+            }
+
+            &:nth-child(1)>img {
+                width: 100px;
+            }
+
+            &:nth-child(5)>img {
+                width: 240px;
             }
         }
     }
+
+    // <!-------------- ESTILOS DE LOS MODULOS -------------->
+    .modules {
+        &__title {
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "abastecimiento"
+        "almacen"
+        "combustible"
+        "caja"
+        "reportes";
+        grid-gap: 30px;
+    }
+
+}
+
+@media screen and (max-width: 406px) {
+
+    // <!-------------- ESTILOS DE CONECCTIONS -------------->
+
+    .panels {
+        &__item {
+            min-height: 285px;
+        }
+    }
+
 }

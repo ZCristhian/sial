@@ -4,6 +4,20 @@
 @import "components/variables";
 @import "components/button";
 
+.header{
+  .main-nav{
+      &__link{
+          &--manuales{
+              color: #000;
+
+              &::after{
+                  width: 100%;
+                  height: 4px;
+              }
+          }
+      }
+  }
+}
 
 .main{
   padding-top: 95px;
@@ -76,21 +90,21 @@
     ;
     }
   }
-    a{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 10px;
-      background: url('../img/manuales/icon-play.svg') 50% 50% no-repeat,rgba($color: #000000, $alpha: 0.45);
-      background-size: 40px 40px;
-      box-shadow: 0px 4px 8px 0px rgb(180, 180, 180);
-      transition: all .3s;
-      opacity: 0;
-      &:hover{
-        opacity: 1;
-      }
+  }
+  &__link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: url('../img/manuales/icon-play.svg') 50% 50% no-repeat,rgba($color: #000000, $alpha: 0.45);
+    background-size: 40px 40px;
+    box-shadow: 0px 4px 8px 0px rgb(180, 180, 180);
+    transition: all .3s;
+    opacity: 0;
+    &:hover{
+      opacity: 1;
     }
   }
   &__image{
@@ -105,6 +119,36 @@
   &__copy{
     font-size: 17px;
     color: white;
+  }
+
+  &__button{
+    display: block;
+    width: 180px;
+    height: 45px;
+    margin: 30px auto 0;
+    border: 2px solid #f81b82;
+    background: #fafafa;
+    transition: all .3s;
+    border-radius: 6px;
+
+    &-link{
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
+      color: #f81d83;
+      transition: all .3s;
+    }
+
+    &:hover {
+      background: #fa0879;
+      box-shadow: 0px 2px 10px -3px rgb(122, 122, 122);
+    }
+
+    &:hover > a{
+      color: #fff;
+    }
   }
 }
 .videos__title, .documentos__title{
@@ -126,7 +170,43 @@
       margin-right: 15px;
     }
   }
+  &__list{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+
+}
+.documento{
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover > img {
+      transform: scale(1.1);
+    }
+  }
+  &__image{
+    width: 100px;
+    transition: all .3s;
+  }
+  &__title{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+  &__link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
 }
 
 
