@@ -92,6 +92,7 @@
 .modules__image {
   width: 200px;
   height: 200px;
+  filter: contrast(120%) brightness(90%);
 }
 .modules__title {
   font-size: 3rem;
@@ -272,6 +273,7 @@
 .security__image {
   max-width: 400px;
   margin-bottom: 20px;
+  filter: brightness(80%) contrast(130%);
 }
 .security__copy {
   color: #bebebe;
