@@ -24,7 +24,7 @@
     }
 
     &__image {
-        max-height: 320px;
+        max-height: 290px;
     }
 
     &__wrapper {
@@ -32,7 +32,7 @@
     }
 
     &__title {
-        font-size: 6rem;
+        font-size: 5rem;
         font-weight: 600;
         padding-top: 20px;
         margin-bottom: 12px;
@@ -69,7 +69,7 @@
 
     &__title {
         margin-bottom: 40px;
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
         color: $title-color;
     }
@@ -112,13 +112,13 @@
     }
 
     &__image {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         filter: contrast(120%) brightness(90%);
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 2.6rem;
         margin-top: 15px;
         text-align: center;
         color: $title-color;
@@ -151,7 +151,7 @@
     text-align: center;
 
     &__title {
-        font-size: 5rem;
+        font-size: 4rem;
         margin-bottom: 30px;
         color: $title-color;
     }
@@ -323,12 +323,12 @@
 
     &__title {
         color: $title-color;
-        font-size: 5rem;
+        font-size: 4rem;
         margin-bottom: 25px;
     }
 
     &__image {
-        max-width: 400px;
+        max-width: 300px;
         margin-bottom: 20px;
         filter: brightness(80%) contrast(130%);
     }
@@ -337,6 +337,8 @@
         color: $paragraph-color;
         font-size: 1.7rem;
         display: block;
+        max-width: 650px;
+        margin: 0 auto;
     }
 }
 
@@ -353,7 +355,7 @@
     text-align: center;
 
     &__title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         color: $title-color;
         margin-bottom: 20px;
     }

@@ -38,27 +38,29 @@
 
     .social-icon {
         transition: all .2s;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
 
         &:hover {
             transform: scale(1.12);
         }
 
         &__facebook {
-            background: url('../img/footer/icon-facebook-dark.svg');
+            background: url('../img/footer/icon-facebook.svg');
             width: 30px;
             height: 30px;
             background-size: cover;
         }
 
         &__youtube {
-            background: url('../img/footer/icon-youtube-dark.svg');
+            background: url('../img/footer/icon-youtube.svg');
             background-size: cover;
+            width: 35px;
+            height: 35px;
         }
 
         &__whatsapp {
-            background: url('../img/footer/icon-whatsapp-dark.svg');
+            background: url('../img/footer/icon-whatsapp.svg');
             background-size: cover;
         }
     }
