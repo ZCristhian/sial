@@ -32,7 +32,7 @@
     }
 
     &__title {
-        font-size: 5rem;
+        font-size: 4.6rem;
         font-weight: 600;
         padding-top: 20px;
         margin-bottom: 12px;
@@ -40,15 +40,14 @@
     }
 
     &__subtitle {
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: 500;
         margin-bottom: 12px;
         color: $title-color;
     }
 
     &__copy {
-        font-weight: 400;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         line-height: 1.4;
         color: $paragraph-color;
     }
@@ -69,46 +68,56 @@
 
     &__title {
         margin-bottom: 40px;
-        font-size: 4rem;
+        font-size: 3.6rem;
         text-align: center;
         color: $title-color;
     }
 }
 
+.carrousel{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.carrousel__arrow-left, .carrousel__arrow-right{
+    position: relative;
+    background: rgba(93, 92, 92, 0.719);
+    border: none;
+    top: 15%;
+    height: 120px;
+    width: 30px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.carrousel__arrow-left:hover, .carrousel__arrow-right:hover{
+    background: rgba(51, 48, 48, 0.541);
+}
+.carrousel__arrow-left{
+    left: 0;
+    transform: rotate(180deg);
+}
+.carrousel__arrow-right{
+    right: 0;
+}
+
+
 .modules {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 40px;
-    grid-template-areas:
-        "abastecimiento abastecimiento almacen almacen combustible combustible"
-        "caja caja caja reportes reportes reportes";
+    user-select: none;
+    width: 100%;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+
 
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
-
-        &--abastecimiento {
-            grid-area: abastecimiento;
-        }
-
-        &--almacen {
-            grid-area: almacen;
-        }
-
-        &--combustible {
-            grid-area: combustible;
-        }
-
-        &--caja {
-            grid-area: caja;
-        }
-
-        &--reportes {
-            grid-area: reportes;
-        }
+        padding: 15px;
+        flex-shrink: 0;
+        width: 25%;
     }
 
     &__image {
@@ -118,12 +127,15 @@
     }
 
     &__title {
-        font-size: 2.6rem;
+        font-size: 2.3rem;
         margin-top: 15px;
         text-align: center;
         color: $title-color;
         line-height: 1;
         height: 80px;
+    }
+    &::-webkit-scrollbar{
+        display: none;
     }
 }
 
@@ -133,8 +145,8 @@
     grid-gap: 20px;
 
     .feature-item {
-        max-width: 250px;
-        font-size: 17px;
+        max-width: 300px;
+        font-size: 16px;
         color: $paragraph-color;
     }
 }
@@ -151,7 +163,7 @@
     text-align: center;
 
     &__title {
-        font-size: 4rem;
+        font-size: 3.6rem;
         margin-bottom: 30px;
         color: $title-color;
     }
@@ -277,7 +289,7 @@
         }
 
         p {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             color: $paragraph-color;
         }
     }
@@ -323,7 +335,7 @@
 
     &__title {
         color: $title-color;
-        font-size: 4rem;
+        font-size: 3.6rem;
         margin-bottom: 25px;
     }
 
@@ -335,7 +347,7 @@
 
     &__copy {
         color: $paragraph-color;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         display: block;
         max-width: 650px;
         margin: 0 auto;
@@ -361,7 +373,7 @@
     }
 
     &__copy {
-        font-size: 17px;
+        font-size: 16px;
         color: $paragraph-color;
     }
 
@@ -385,7 +397,7 @@
 // <!--------------------------------------- MEDIAQUERYS ------------------------------------->
 @media screen and (max-width: 1080px) {
     $padding-size: 20px;
-    $width-size: 90rem;
+    $width-size: 100rem;
 
     // <!-------------- ESTILOS DEL HERO -------------->
     .main {
@@ -403,7 +415,6 @@
 
         &__title {
             padding-top: 0;
-            font-size: 4.8rem;
             margin-bottom: 8px;
         }
 
@@ -423,9 +434,6 @@
         max-width: $width-size;
         padding-top: 40px;
 
-        &__title {
-            font-size: 38px;
-        }
     }
 
     .modules {
@@ -437,6 +445,7 @@
 
         &__item {
             padding: 10px;
+            width: 33.3%;
         }
     }
 
@@ -448,10 +457,6 @@
     .conections {
         max-width: $width-size;
         padding: 0 $padding-size;
-
-        &__title {
-            font-size: 3.8rem;
-        }
     }
 
     // <!-------------- ESTILOS DE SECURITY -------------->
@@ -462,10 +467,6 @@
     .security {
         max-width: $width-size;
         padding: 0 $padding-size;
-
-        &__title {
-            font-size: 3.8rem;
-        }
     }
 
     // <!-------------- ESTILOS DE INTERNET -------------->
@@ -476,10 +477,6 @@
     .internet {
         max-width: $width-size;
         padding: $padding-size;
-
-        &__title {
-            font-size: 28px;
-        }
     }
 
 }
@@ -503,13 +500,10 @@
     }
 
     // <!-------------- ESTILOS DE LA SECCION MODULOS -------------->
-    .modules {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas:
-            "abastecimiento almacen"
-            "combustible caja"
-            "reportes reportes";
+    .modules{
+        &__item{
+            width: 50%;
+        }
     }
 }
 
@@ -518,11 +512,19 @@
 
     // <!-------------- ESTILOS DEL HERO -------------->
     .main {
-        padding-top: 125px;
+        padding-top: 100px;
     }
 
     .about-hero {
         padding: 0 $padding-size;
+    }
+
+
+
+    .modules{
+        &__item{
+            width: 100%;
+        }
     }
 
     // <!-------------- ESTILOS DE LAS CONEXIONES -------------->
@@ -564,6 +566,18 @@
         &__wrapper {
             padding: 0;
         }
+    }
+
+
+    .container-modules{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .carrousel__arrow-left, .carrousel__arrow-right{
+        top: 10%;
+        height: 100px;
+        z-index: 900;
     }
 
     // <!-------------- ESTILOS DEL HERO -------------->
@@ -610,15 +624,6 @@
             height: auto;
             margin-bottom: 15px;
         }
-
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "abastecimiento"
-        "almacen"
-        "combustible"
-        "caja"
-        "reportes";
-        grid-gap: 30px;
     }
 
 }

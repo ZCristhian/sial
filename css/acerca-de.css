@@ -5,7 +5,7 @@
 }
 
 .about-hero {
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
@@ -23,21 +23,20 @@
   margin-left: 30px;
 }
 .about-hero__title {
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 600;
   padding-top: 20px;
   margin-bottom: 12px;
   color: #f5f5f7;
 }
 .about-hero__subtitle {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 500;
   margin-bottom: 12px;
   color: #f5f5f7;
 }
 .about-hero__copy {
-  font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.4;
   color: #bebebe;
 }
@@ -47,47 +46,65 @@
 }
 
 .container-modules {
-  background: #161616;
+  background: #1e1e1e;
   border-radius: 25px;
   width: 95%;
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 50px 20px 20px;
 }
 .container-modules__title {
   margin-bottom: 40px;
-  font-size: 4rem;
+  font-size: 3.6rem;
   text-align: center;
   color: #f5f5f7;
 }
 
+.carrousel {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.carrousel__arrow-left, .carrousel__arrow-right {
+  position: relative;
+  background: rgba(93, 92, 92, 0.719);
+  border: none;
+  top: 15%;
+  height: 120px;
+  width: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carrousel__arrow-left:hover, .carrousel__arrow-right:hover {
+  background: rgba(51, 48, 48, 0.541);
+}
+
+.carrousel__arrow-left {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.carrousel__arrow-right {
+  right: 0;
+}
+
 .modules {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 40px;
-  grid-template-areas: "abastecimiento abastecimiento almacen almacen combustible combustible" "caja caja caja reportes reportes reportes";
+  user-select: none;
+  width: 100%;
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
 }
 .modules__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-}
-.modules__item--abastecimiento {
-  grid-area: abastecimiento;
-}
-.modules__item--almacen {
-  grid-area: almacen;
-}
-.modules__item--combustible {
-  grid-area: combustible;
-}
-.modules__item--caja {
-  grid-area: caja;
-}
-.modules__item--reportes {
-  grid-area: reportes;
+  padding: 15px;
+  flex-shrink: 0;
+  width: 25%;
 }
 .modules__image {
   width: 150px;
@@ -95,12 +112,15 @@
   filter: contrast(120%) brightness(90%);
 }
 .modules__title {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   margin-top: 15px;
   text-align: center;
   color: #f5f5f7;
   line-height: 1;
   height: 80px;
+}
+.modules::-webkit-scrollbar {
+  display: none;
 }
 
 .feature-list {
@@ -109,8 +129,8 @@
   grid-gap: 20px;
 }
 .feature-list .feature-item {
-  max-width: 250px;
-  font-size: 17px;
+  max-width: 300px;
+  font-size: 16px;
   color: #bebebe;
 }
 
@@ -119,13 +139,13 @@
 }
 
 .conections {
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 30px;
   margin: 0 auto;
   text-align: center;
 }
 .conections__title {
-  font-size: 4rem;
+  font-size: 3.6rem;
   margin-bottom: 30px;
   color: #f5f5f7;
 }
@@ -228,7 +248,7 @@
   color: #f5f5f7;
 }
 .panels__item p {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: #bebebe;
 }
 
@@ -260,14 +280,14 @@
 }
 
 .security {
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 30px;
   margin: 0 auto;
   text-align: center;
 }
 .security__title {
   color: #f5f5f7;
-  font-size: 4rem;
+  font-size: 3.6rem;
   margin-bottom: 25px;
 }
 .security__image {
@@ -277,7 +297,7 @@
 }
 .security__copy {
   color: #bebebe;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   display: block;
   max-width: 650px;
   margin: 0 auto;
@@ -288,7 +308,7 @@
 }
 
 .internet {
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 8%;
   margin: 0 auto;
   text-align: center;
@@ -299,7 +319,7 @@
   margin-bottom: 20px;
 }
 .internet__copy {
-  font-size: 17px;
+  font-size: 16px;
   color: #bebebe;
 }
 .internet [class*=lan__copy] {
@@ -316,7 +336,7 @@
   }
 
   .about-hero {
-    max-width: 90rem;
+    max-width: 100rem;
     padding: 0 20px;
   }
   .about-hero__image {
@@ -324,7 +344,6 @@
   }
   .about-hero__title {
     padding-top: 0;
-    font-size: 4.8rem;
     margin-bottom: 8px;
   }
   .about-hero__subtitle {
@@ -337,11 +356,8 @@
   }
 
   .container-modules {
-    max-width: 90rem;
+    max-width: 100rem;
     padding-top: 40px;
-  }
-  .container-modules__title {
-    font-size: 38px;
   }
 
   .modules__title {
@@ -350,6 +366,7 @@
   }
   .modules__item {
     padding: 10px;
+    width: 33.3%;
   }
 
   .section-conections {
@@ -357,11 +374,8 @@
   }
 
   .conections {
-    max-width: 90rem;
+    max-width: 100rem;
     padding: 0 20px;
-  }
-  .conections__title {
-    font-size: 3.8rem;
   }
 
   .section-security {
@@ -369,11 +383,8 @@
   }
 
   .security {
-    max-width: 90rem;
+    max-width: 100rem;
     padding: 0 20px;
-  }
-  .security__title {
-    font-size: 3.8rem;
   }
 
   .section-internet {
@@ -381,11 +392,8 @@
   }
 
   .internet {
-    max-width: 90rem;
+    max-width: 100rem;
     padding: 20px;
-  }
-  .internet__title {
-    font-size: 28px;
   }
 }
 @media screen and (max-width: 870px) {
@@ -402,19 +410,21 @@
     padding: 0 40px;
   }
 
-  .modules {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "abastecimiento almacen" "combustible caja" "reportes reportes";
+  .modules__item {
+    width: 50%;
   }
 }
 @media screen and (max-width: 767px) {
   .main {
-    padding-top: 125px;
+    padding-top: 100px;
   }
 
   .about-hero {
     padding: 0 15px;
+  }
+
+  .modules__item {
+    width: 100%;
   }
 
   .conections {
@@ -444,6 +454,17 @@
   }
   .about-hero__wrapper {
     padding: 0;
+  }
+
+  .container-modules {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .carrousel__arrow-left, .carrousel__arrow-right {
+    top: 10%;
+    height: 100px;
+    z-index: 900;
   }
 
   .feature-list {
@@ -476,12 +497,6 @@
     width: 240px;
   }
 
-  .modules {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "abastecimiento" "almacen" "combustible" "caja" "reportes";
-    grid-gap: 30px;
-  }
   .modules__title {
     height: auto;
     margin-bottom: 15px;

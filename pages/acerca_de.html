@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/acerca-de.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <title>Sial - Acerca de</title>
+  <title>Sial - Productos</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
           <img class="about-hero__image" src="../img/acerca_de/notebook.png" alt="Pantalla principal de Sial" />
         </figure>
         <div class="about-hero__wrapper">
-          <h1 class="about-hero__title">Acerca de</h1>
+          <h1 class="about-hero__title">Productos</h1>
           <h2 class="about-hero__subtitle">
             SISTEMA DE ADMINISTRACION LOGISTICA – S.I.A.L.
           </h2>
@@ -79,78 +79,88 @@
     <section class="section-modules" id="modulos">
       <div class="container-modules">
         <h2 class="container-modules__title">Módulos del Sistema</h2>
-        <ul class="modules">
-          <li class="modules__item modules__item--abastecimiento">
-            <img class="modules__image" src="../img/acerca_de/img-abas.svg" alt="Imagen de Abastecimiento"/>
-            <h3 class="modules__title">Módulo de Abastecimiento</h3>
-            <ul class="feature-list">
-              <li class="feature-item">
-                Elaboración de Solicitud de Cotización
-              </li>
-              <li class="feature-item">
-                Elaboración del Cuadro Comparativo de Cotizaciones
-              </li>
-              <li class="feature-item">Registro y control de Contratos</li>
-              <li class="feature-item">Elaboración de Orden de Compra</li>
-              <li class="feature-item">Elaboración de Orden de Servicio</li>
-            </ul>
-          </li>
-          <li class="modules__item modules__item--almacen">
-            <img class="modules__image" src="../img/acerca_de/img-almacen.svg" alt="Imagen de un almacen" />
-            <h3 class="modules__title">Módulo de Almacén</h3>
-            <ul class="feature-list">
-              <li class="feature-item">
-                Elaboración de Inventario Inicial de Bienes de Almacén
-              </li>
-              <li class="feature-item">
-                Elaboración de Pedido – Comprobante de Salida (PECOSAS)
-              </li>
-              <li class="feature-item">
-                Internamiento de Bienes según Orden de Compra, Inventario y
-                NEAS
-              </li>
-              <li class="feature-item">
-                Elaboración de Notas de Entrada a Almacén (NEAs)
-              </li>
-            </ul>
-          </li>
-          <li class="modules__item modules__item--combustible">
-            <img class="modules__image" src="../img/acerca_de/img-fuel.svg" alt="Imagen de combustible" />
-            <h3 class="modules__title">Módulo de Control de Combustible</h3>
-            <ul class="feature-list">
-              <li class="feature-item">Elaboración de Vales</li>
-              <li class="feature-item">
-                Elaboración de Liquidación de Vales
-              </li>
-            </ul>
-          </li>
-          <li class="modules__item modules__item--caja">
-            <img class="modules__image" src="../img/acerca_de/img-money.svg" alt="Imagen de dinero" />
-            <h3 class="modules__title">Módulo de Caja/Recaudacion</h3>
-            <ul class="feature-list">
-              <li class="feature-item">Recaudacion de Ingresos</li>
-              <li class="feature-item">Reportes</li>
-            </ul>
-          </li>
-          <li class="modules__item modules__item--reportes">
-            <img class="modules__image" src="../img/acerca_de/img-reports.svg" alt="Imagen de un reporte" />
-            <h3 class="modules__title">Reportes</h3>
-            <ul class="feature-list">
-              <li class="feature-item">
-                Emisión de REPORTES GENERALES (Adquisiciones por meta,
-                Movimiento de Bienes, Notas de contabilidad mensual, Kardex,
-                Bincard y Otros (incluye en Formato PDF y para Exportar a
-                Excel).
-              </li>
-              <li class="feature-item">
-                Generación de Archivo para el registro de información en el
-                SEACE, de las Órdenes de Compra y Servicios, de conformidad a
-                la Directiva N° 007-2012-OSCE/CD, Resolución N°
-                269-2013-OSCE/PRE y Comunicado N° 002-2013-OSCE/DTN
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="carrousel">
+          <button id="arrowLeft" class="carrousel__arrow-left">
+            <img src="../img/acerca_de/arrow.svg" alt="">
+          </button>
+          <ul class="modules">
+            <li class="modules__item modules__item--abastecimiento">
+              <img class="modules__image" src="../img/acerca_de/img-abas.svg" alt="Imagen de Abastecimiento"/>
+              <h3 class="modules__title">Módulo de Abastecimiento</h3>
+              <ul class="feature-list">
+                <li class="feature-item">
+                  Elaboración de Solicitud de Cotización
+                </li>
+                <li class="feature-item">
+                  Elaboración del Cuadro Comparativo de Cotizaciones
+                </li>
+                <li class="feature-item">Registro y control de Contratos</li>
+                <li class="feature-item">Elaboración de Orden de Compra</li>
+                <li class="feature-item">Elaboración de Orden de Servicio</li>
+              </ul>
+            </li>
+            <li class="modules__item modules__item--almacen">
+              <img class="modules__image" src="../img/acerca_de/img-almacen.svg" alt="Imagen de un almacen" />
+              <h3 class="modules__title">Módulo de Almacén</h3>
+              <ul class="feature-list">
+                <li class="feature-item">
+                  Elaboración de Inventario Inicial de Bienes de Almacén
+                </li>
+                <li class="feature-item">
+                  Elaboración de Pedido – Comprobante de Salida (PECOSAS)
+                </li>
+                <li class="feature-item">
+                  Internamiento de Bienes según Orden de Compra, Inventario y
+                  NEAS
+                </li>
+                <li class="feature-item">
+                  Elaboración de Notas de Entrada a Almacén (NEAs)
+                </li>
+              </ul>
+            </li>
+            <li class="modules__item modules__item--combustible">
+              <img class="modules__image" src="../img/acerca_de/img-fuel.svg" alt="Imagen de combustible" />
+              <h3 class="modules__title">Módulo de Control de Combustible</h3>
+              <ul class="feature-list">
+                <li class="feature-item">Elaboración de Vales</li>
+                <li class="feature-item">
+                  Elaboración de Liquidación de Vales
+                </li>
+              </ul>
+            </li>
+            <li class="modules__item modules__item--caja">
+              <img class="modules__image" src="../img/acerca_de/img-money.svg" alt="Imagen de dinero" />
+              <h3 class="modules__title">Módulo de Caja/Recaudacion</h3>
+              <ul class="feature-list">
+                <li class="feature-item">Recaudacion de Ingresos</li>
+                <li class="feature-item">Reportes</li>
+              </ul>
+            </li>
+            <li class="modules__item modules__item--reportes">
+              <img class="modules__image" src="../img/acerca_de/img-reports.svg" alt="Imagen de un reporte" />
+              <h3 class="modules__title">Reportes</h3>
+              <ul class="feature-list">
+                <li class="feature-item">
+                  Emisión de REPORTES GENERALES (Adquisiciones por meta,
+                  Movimiento de Bienes, Notas de contabilidad mensual, Kardex,
+                  Bincard y Otros (incluye en Formato PDF y para Exportar a
+                  Excel).
+                </li>
+                <li class="feature-item">
+                  Generación de Archivo para el registro de información en el
+                  SEACE, de las Órdenes de Compra y Servicios, de conformidad a
+                  la Directiva N° 007-2012-OSCE/CD, Resolución N°
+                  269-2013-OSCE/PRE y Comunicado N° 002-2013-OSCE/DTN
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button id="arrowRight" class="carrousel__arrow-right">
+            <img src="../img/acerca_de/arrow.svg" alt="">
+          </button>
+          <div class="hidden-scroll" id="hidden-scroll"></div>
+        </div>
+
       </div>
     </section>
 
@@ -335,6 +345,7 @@
 
   <script src="../js/main.js"></script>
   <script src="../js/tab.js"></script>
+  <script src="../js/carrousel.js"></script>
 </body>
 
 </html>

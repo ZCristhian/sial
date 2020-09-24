@@ -137,6 +137,9 @@ button {
         &:hover {
             @include styleBtn-hover;
         }
+        &:active{
+            @include styleBtn-active;
+        }
     }
 
 }
@@ -155,10 +158,10 @@ button {
 // <!--------------------------------------- MEDIAQUERYS ------------------------------------->
 @media screen and (max-width: 1080px) {
     $padding-size: 20px;
-    $width-size: 90rem;
+    $width-size: 100rem;
 
     .header {
-        height: 6.5rem;
+        height: 5.5rem;
     }
 
     .main-nav {

@@ -1,8 +1,8 @@
 // Variables Globales
 $global-font: 'Roboto', sans-serif;
 $padding-size: 30px;
-$width-size: 120rem;
-$body-color: rgb(17, 17, 17);
+$width-size: 140rem;
+$body-color: #121212;
 $title-color: rgb(245, 245, 247);
 $h1-fontSize: 60px;
 $h2-fontsize: $h1-fontSize - 10px;
@@ -10,7 +10,7 @@ $h3-fontsize: 30px;
 $paragraph-color: rgb(190, 190, 190);
 $linkCta-color: #bb0a36;
 $gradient-btn: linear-gradient(90deg, #fe7b11, #fe0e95);
-$footer-color: rgb(20, 20, 20);
+$footer-color: rgb(15, 15, 15);
 
 // Variables de la pagina Inicio
 $gradientArticle-1: linear-gradient(135deg, #e4127a 0%, #75018f 100%);
@@ -20,7 +20,7 @@ $gradientArticle-4: linear-gradient(45deg, #fbb23b 0%, #ec0d8a 100%);
 $colorParagraph-article: #8a8888;
 
 // Variables de la pagina Acerca de y Clientes
-$background-stack: rgb(22, 22, 22);
+$background-stack: rgb(30, 30, 30);
 
 // Variables de la pagina Manuales
 $gradientColor-jade: linear-gradient(90deg, #3ABEB1 , #299E90);

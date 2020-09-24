@@ -6,7 +6,7 @@
 @import "components/button";
 
 .main{
-  padding-top: 175px;
+  padding-top: 140px;
 }
 // <!-------------- ESTILOS DEL HERO -------------->
 .hero{
@@ -20,13 +20,13 @@
   }
   &__title{
     margin: 50px 0 12px;
-    font-size: 5rem;
+    font-size: 4.6rem;
     font-weight: 600;
     color: $title-color;
   }
   &__copy{
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: 0px;
     color: $paragraph-color;
@@ -83,9 +83,6 @@
     &__wrapper{
       margin-right: 50px;
     }
-    &__title{
-      font-size: 4.8rem;
-    }
     &__image{
       width: 380px;
     }
@@ -106,6 +103,9 @@
 }
 
 @media screen and (max-width: 870px){
+  .main{
+    padding-top: 100px;
+  }
 // <!-------------- ESTILOS DEL HERO -------------->
   .hero{
     max-width: 500px;
@@ -119,26 +119,29 @@
       margin-top: 0px;
       margin-bottom: 8px;
     }
+    &__figure{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__image{
-      width: 100%;
+      width: 80%;
     }
   }
 }
-
+@media screen and (max-width: 794px){
+  // <!-------------- ESTILOS DE LA SECCION CLIENTES -------------->
+      .clients{
+        &__list{
+          grid-template-columns: 1fr;
+        }
+      }
+  
+  }
 @media screen and (max-width: 767px){
   $padding-size: 15px;
 // <!-------------- ESTILOS DEL HERO -------------->
   .hero{
     padding: 0 $padding-size;
   }
-}
-
-@media screen and (max-width: 794px){
-// <!-------------- ESTILOS DE LA SECCION CLIENTES -------------->
-    .clients{
-      &__list{
-        grid-template-columns: 1fr;
-      }
-    }
-
 }

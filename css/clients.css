@@ -1,12 +1,12 @@
 @import url("header.css");
 @import url("footer.css");
 .main {
-  padding-top: 175px;
+  padding-top: 140px;
 }
 
 .hero {
   display: flex;
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -15,13 +15,13 @@
 }
 .hero__title {
   margin: 50px 0 12px;
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 600;
   color: #f5f5f7;
 }
 .hero__copy {
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: 0px;
   color: #bebebe;
@@ -39,8 +39,8 @@
 }
 
 .clients {
-  background: #161616;
-  max-width: 120rem;
+  background: #1e1e1e;
+  max-width: 140rem;
   margin: 0 auto;
   width: 95%;
   border-radius: 25px;
@@ -71,9 +71,6 @@
   .hero__wrapper {
     margin-right: 50px;
   }
-  .hero__title {
-    font-size: 4.8rem;
-  }
   .hero__image {
     width: 380px;
   }
@@ -92,6 +89,10 @@
   }
 }
 @media screen and (max-width: 870px) {
+  .main {
+    padding-top: 100px;
+  }
+
   .hero {
     max-width: 500px;
     flex-direction: column-reverse;
@@ -104,18 +105,23 @@
     margin-top: 0px;
     margin-bottom: 8px;
   }
-  .hero__image {
-    width: 100%;
+  .hero__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
-@media screen and (max-width: 767px) {
-  .hero {
-    padding: 0 15px;
+  .hero__image {
+    width: 80%;
   }
 }
 @media screen and (max-width: 794px) {
   .clients__list {
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    padding: 0 15px;
   }
 }
 

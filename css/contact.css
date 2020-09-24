@@ -1,11 +1,11 @@
 @import url("header.css");
 @import url("footer.css");
 body {
-  background: #111111;
+  background: #121212;
 }
 
 .main {
-  padding-top: 75px;
+  padding-top: 55px;
   min-height: 100vh;
 }
 
@@ -13,11 +13,11 @@ body {
   background-blend-mode: overlay;
   background: url("../img/contacto/background.jpg") center no-repeat, linear-gradient(135deg, #fe7b11 0%, #b80572 100%) !important;
   background-size: cover;
-  box-shadow: inset 0px -150px 0px #111111;
+  box-shadow: inset 0px -150px 0px #121212;
 }
 
 .hero {
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -27,7 +27,7 @@ body {
   color: #fff;
 }
 .hero__title {
-  font-size: 5rem;
+  font-size: 4.6rem;
   text-align: center;
   font-weight: 500;
   line-height: 0.95;

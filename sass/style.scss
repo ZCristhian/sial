@@ -7,36 +7,32 @@
 
 // ESTILOS DEL HERO
 .main {
-    padding-top: 215px;
+    padding-top: 170px;
 }
 
 .hero {
     max-width: $width-size;
     margin: 0 auto;
     padding: 0 $padding-size;
-    display: grid;
-    grid-template-columns: 430px minmax(560px, 1fr);
-    gap: 30px;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "hero-wrapper hero-image"
-    ;
+    display: flex;
+    justify-content: center;
 
-    &__wrapper {
-        grid-area: hero-wrapper;
+    &__wrapper{
+        max-width: 600px;
+        margin-right: 20px;
     }
 
+
     &__title {
-        padding-top: 20px;
+        padding-top: 40px;
         margin-bottom: 12px;
-        font-size: 5rem;
+        font-size: 4.6rem;
         font-weight: 600;
         color: $title-color;
     }
 
     &__copy {
-        font-weight: 400;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         line-height: 1.4;
         color: $paragraph-color;
         margin-bottom: 30px;
@@ -56,7 +52,7 @@
 
     &__figure {
         position: relative;
-        grid-area: hero-image;
+        max-width: 680px;
     }
 
     &__background-circle {
@@ -78,8 +74,8 @@
 
 // <!-------------- ESTILOS DE LA SECCION WHY -------------->
 .section-why {
-    margin-top: 120px;
-    background: rgb(21, 21, 21);
+    margin-top: 130px;
+    background: #1b1b1b;
     padding: 6rem 0;
 }
 
@@ -91,7 +87,7 @@
     color: $title-color;
 
     &__title {
-        font-size: 4rem;
+        font-size: 3.6rem;
         font-weight: 500;
         margin-bottom: 40px;
     }
@@ -117,21 +113,20 @@
     }
 
     &__subtitle {
-        font-size: 2.8rem;
+        font-size: 2.3rem;
         margin-bottom: 15px;
         font-weight: 500;
     }
 
     &__subcopy {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.4;
-        font-weight: 400;
         margin-bottom: 15px;
         color: $paragraph-color;
     }
 
     &__link {
-        font-size: 18px;
+        font-size: 17px;
         color: #ff3164;
         transition: all .3s;
         margin-bottom: 10px;
@@ -156,26 +151,26 @@
 /*************** MEDIA QUERYS ****************/
 @media screen and (max-width: 1080px) {
     $padding-size: 20px;
-    $width-size: 90rem;
+    $width-size: 100rem;
 
     .main {
-        padding-top: 165px;
+        padding-top: 135px;
     }
 
     .hero {
         max-width: $width-size;
         padding: 0 $padding-size;
-        grid-template-columns: 36rem minmax(440px, 1fr);
-        gap: 20px;
+
+        &__wrapper{
+            margin-right: 10px;
+        }
 
         &__title {
-            padding-top: 0;
-            font-size: 4.8rem;
+            padding-top: 15px;
             margin-bottom: 10px;
         }
 
         &__copy {
-            font-size: 1.6rem;
             line-height: 1.4;
             margin-bottom: 20px;
         }
@@ -196,10 +191,6 @@
             gap: 6.5rem;
         }
 
-        &__title {
-            font-size: 38px;
-        }
-
         &__subtitle {
             font-size: 22px;
         }
@@ -213,15 +204,12 @@
 
     .hero {
         width: 600px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        grid-gap: 50px;
-        grid-template-areas:
-            "hero-image"
-            "hero-wrapper"
-        ;
+        flex-direction: column-reverse;
         text-align: center;
 
+        &__title{
+            padding-top: 25px;
+        }
         &__background-circle {
             top: -70px;
         }
