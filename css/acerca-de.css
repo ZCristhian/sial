@@ -67,9 +67,14 @@
   justify-content: center;
 }
 
+.arrow-svg {
+  transition: all 0.3s;
+  fill: #959595;
+}
+
 .carrousel__arrow-left, .carrousel__arrow-right {
   position: relative;
-  background: rgba(93, 92, 92, 0.719);
+  background: rgba(45, 45, 45, 0.8);
   border: none;
   top: 15%;
   height: 120px;
@@ -79,7 +84,10 @@
 }
 
 .carrousel__arrow-left:hover, .carrousel__arrow-right:hover {
-  background: rgba(51, 48, 48, 0.541);
+  background: rgba(80, 80, 80, 0.7);
+}
+.carrousel__arrow-left:hover .arrow-svg, .carrousel__arrow-right:hover .arrow-svg {
+  fill: #f1f1f1;
 }
 
 .carrousel__arrow-left {

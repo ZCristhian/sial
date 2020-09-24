@@ -48,7 +48,7 @@
 }
 .hero__btn:hover {
   opacity: 0.9;
-  box-shadow: 0px 10px 10px -10px #d10076;
+  box-shadow: 0px 10px 10px -8px #d10076;
 }
 .hero__figure {
   position: relative;

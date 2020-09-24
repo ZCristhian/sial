@@ -127,7 +127,7 @@ button {
 }
 .main-nav__btn:hover {
   opacity: 0.9;
-  box-shadow: 0px 10px 10px -10px #d10076;
+  box-shadow: 0px 10px 10px -8px #d10076;
 }
 .main-nav__btn:active {
   transition: all 50ms;
