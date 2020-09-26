@@ -25,7 +25,7 @@ button {
 
         &::after {
             width: 100%;
-            height: 4px;
+            height: 85%;
         }
     }
 }
@@ -46,20 +46,22 @@ button {
     display: none;
 }
 
+
+
+
+
 // --------------ESTILOS DEL HEADER---------------//
 .header {
     user-select: none;
     width: 100%;
     height: 55px;
-    background: rgba($color: rgb(0, 0, 0), $alpha: 0.75);
-    // background: rgba($color: rgb(209, 0, 52), $alpha: 0.75);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background: rgba($color: rgb(0, 0, 0), $alpha: 1);
+    // backdrop-filter: saturate(180%) blur(20px);
+    // -webkit-backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     z-index: 1000;
     top: 0;
 }
-
 
 // --------------ESTILOS DE LA NAVEGACION---------------//
 .main-nav {
@@ -77,7 +79,7 @@ button {
     }
 
     &__list {
-        width: 33rem;
+        width: 36rem;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -102,24 +104,26 @@ button {
         transition: all 300ms;
         position: relative;
         user-select: none;
-        padding: 0 1px;
+        padding: 10px 15px 0;
 
         &::after {
             content: "";
             position: absolute;
-            width: 0;
-            height: 2.5px;
-            background: $gradient-btn;
+            width: 85%;
+            height: 0;
+            background: $body-color;
             bottom: 0;
             transition: all .3s;
+            border-radius: 10px 10px 0 0 ;
+            z-index: -1;
         }
 
         &:hover {
-            color: rgb(240, 240, 240);
+            // color: rgb(240, 240, 240);
 
             &::after {
-                transition: all .3s;
-                width: 100%;
+                transition: all .2s;
+                height: 85%;
             }
         }
     }

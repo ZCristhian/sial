@@ -1,7 +1,7 @@
 @import url("header.css");
 @import url("footer.css");
 body {
-  background: #121212;
+  background: #2a2a2a;
 }
 
 .main {
@@ -13,7 +13,7 @@ body {
   background-blend-mode: overlay;
   background: url("../img/contacto/background.jpg") center no-repeat, linear-gradient(135deg, #fe7b11 0%, #b80572 100%) !important;
   background-size: cover;
-  box-shadow: inset 0px -150px 0px #121212;
+  box-shadow: inset 0px -150px 0px #2a2a2a;
 }
 
 .hero {
