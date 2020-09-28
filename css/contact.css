@@ -1,11 +1,11 @@
 @import url("header.css");
 @import url("footer.css");
 body {
-  background: #2a2a2a;
+  background: #141418;
 }
 
 .main {
-  padding-top: 55px;
+  padding-top: 50px;
   min-height: 100vh;
 }
 
@@ -13,7 +13,7 @@ body {
   background-blend-mode: overlay;
   background: url("../img/contacto/background.jpg") center no-repeat, linear-gradient(135deg, #fe7b11 0%, #b80572 100%) !important;
   background-size: cover;
-  box-shadow: inset 0px -150px 0px #2a2a2a;
+  box-shadow: inset 0px -150px 0px #141418;
 }
 
 .hero {
@@ -179,7 +179,7 @@ body {
 
 @media screen and (max-width: 1080px) {
   .main {
-    padding-top: 65px;
+    padding-top: 50px;
   }
 
   .hero {

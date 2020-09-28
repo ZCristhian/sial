@@ -20,13 +20,30 @@ button {
 }
 
 .header {
-    .main-nav__link--focus {
-        color: #fff;
+    .main-nav__item--focus {
 
+        &::before,
         &::after {
-            width: 100%;
-            height: 85%;
+            opacity: 1;
         }
+
+        .main-nav__link {
+            color: #fff;
+            background: $body-color;
+
+            &::after,
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+[class="main-nav__link"] {
+    &:hover {
+        z-index: 3;
+        background: rgb(131, 7, 48);
+        opacity: 0.9;
     }
 }
 
@@ -54,10 +71,8 @@ button {
 .header {
     user-select: none;
     width: 100%;
-    height: 55px;
-    background: rgba($color: rgb(0, 0, 0), $alpha: 1);
-    // backdrop-filter: saturate(180%) blur(20px);
-    // -webkit-backdrop-filter: saturate(180%) blur(20px);
+    height: 50px;
+    background: $header-color;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -74,77 +89,89 @@ button {
     align-items: center;
 
     &__logo {
-        width: 9rem;
+        width: 10rem;
         user-select: none;
     }
 
     &__list {
-        width: 36rem;
+        width: 52rem;
         height: 100%;
         display: flex;
         justify-content: space-between;
+        // padding-top: 3px;
     }
 
     &__item {
         height: 100%;
-
-        &--hidden {
-            display: none;
-        }
-    }
-
-    &__link {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $paragraph-color;
-        font-size: 16px;
-        font-weight: 400;
-        transition: all 300ms;
         position: relative;
-        user-select: none;
-        padding: 10px 15px 0;
+        display: flex;
+        align-items: flex-end;
 
+        &::before,
         &::after {
             content: "";
             position: absolute;
-            width: 85%;
-            height: 0;
-            background: $body-color;
+            width: 20px;
+            height: 20px;
+            background: $header-color;
             bottom: 0;
-            transition: all .3s;
-            border-radius: 10px 10px 0 0 ;
-            z-index: -1;
+            opacity: 0;
+            z-index: 1;
+            border-radius: 50%;
         }
 
-        &:hover {
-            // color: rgb(240, 240, 240);
+        &::before {
+            right: 100%;
+        }
 
+        &::after {
+            left: 100%;
+        }
+
+        &::hover {
+
+            &::before,
             &::after {
-                transition: all .2s;
-                height: 85%;
+                opacity: 0.9;
             }
         }
     }
 
-    // --------------ESTILOS DEL BOTON---------------//
-    &__btn {
-        @include styleBtn;
+    &__link {
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(230, 230, 230);
+        border-radius: 15px 15px 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        position: relative;
+        user-select: none;
+        padding: 0px 20px 0;
 
-        &--hidden {
-            display: none;
-            margin: 0;
-            padding: 0;
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            background: $body-color;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
         }
 
-        &:hover {
-            @include styleBtn-hover;
+        &::after {
+            left: 100%;
         }
-        &:active{
-            @include styleBtn-active;
+
+        &::before {
+            right: 100%;
         }
+
+
     }
+
 
 }
 
@@ -164,10 +191,6 @@ button {
     $padding-size: 20px;
     $width-size: 100rem;
 
-    .header {
-        height: 5.5rem;
-    }
-
     .main-nav {
         max-width: $width-size;
         padding: 0 $padding-size;
@@ -177,7 +200,7 @@ button {
         }
 
         &__list {
-            width: 31rem;
+            width: 50rem;
         }
     }
 }
