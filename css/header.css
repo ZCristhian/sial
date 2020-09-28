@@ -70,9 +70,9 @@ button {
 .main-nav__logo {
   width: 10rem;
   user-select: none;
+  filter: drop-shadow(2px 4px 6px black);
 }
 .main-nav__list {
-  width: 52rem;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -140,9 +140,6 @@ button {
   .main-nav__logo {
     width: 10rem;
   }
-  .main-nav__list {
-    width: 50rem;
-  }
 }
 @media screen and (max-width: 767px) {
   .header {
@@ -150,7 +147,7 @@ button {
     transition: background ease-in-out 0.3s;
   }
   .header.active {
-    background: #000;
+    background: #141418;
   }
   .header.active .main-nav {
     position: relative;
@@ -191,6 +188,9 @@ button {
   .main-nav {
     padding: 0 15px;
   }
+  .main-nav__item--focus .main-nav__link {
+    background: #D5003B !important;
+  }
   .main-nav__list {
     height: 0;
     visibility: hidden;
@@ -201,7 +201,7 @@ button {
     flex-direction: column;
     justify-content: start;
     width: 100%;
-    background: #000;
+    background: #141418;
     transition: all ease-in-out 0.4s;
     overflow: hidden;
     top: 55px;

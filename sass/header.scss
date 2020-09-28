@@ -91,10 +91,10 @@ button {
     &__logo {
         width: 10rem;
         user-select: none;
+        filter: drop-shadow(2px 4px 6px black);
     }
 
     &__list {
-        width: 52rem;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -199,9 +199,6 @@ button {
             width: 10rem;
         }
 
-        &__list {
-            width: 50rem;
-        }
     }
 }
 
@@ -215,7 +212,7 @@ button {
         transition: background ease-in-out .3s;
 
         &.active {
-            background: #000;
+            background: $body-color;
 
             .main-nav {
                 position: relative;
@@ -266,6 +263,12 @@ button {
     .main-nav {
         padding: 0 $padding-size;
 
+            &__item--focus {
+                .main-nav__link {
+                    background: $header-color !important;
+                }
+            }
+
         &__list {
             height: 0;
             visibility: hidden;
@@ -276,7 +279,7 @@ button {
             flex-direction: column;
             justify-content: start;
             width: 100%;
-            background: #000;
+            background: $body-color;
             transition: all ease-in-out .4s;
             overflow: hidden;
             top: 55px;
