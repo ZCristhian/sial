@@ -114,7 +114,7 @@ button {
             background: $body-color;
             bottom: 0;
             transition: all .3s;
-            border-radius: 10px 10px 0 0 ;
+            border-radius: 10px 10px 0 0;
             z-index: -1;
         }
 
@@ -141,7 +141,8 @@ button {
         &:hover {
             @include styleBtn-hover;
         }
-        &:active{
+
+        &:active {
             @include styleBtn-active;
         }
     }
