@@ -5,15 +5,8 @@ body {
 }
 
 .main {
-  padding-top: 50px;
+  padding-top: 95px;
   min-height: 100vh;
-}
-
-.section-hero {
-  background-blend-mode: overlay;
-  background: url("../img/contacto/background.jpg") center no-repeat, linear-gradient(135deg, #fe7b11 0%, #b80572 100%) !important;
-  background-size: cover;
-  box-shadow: inset 0px -150px 0px #141418;
 }
 
 .hero {
@@ -23,7 +16,6 @@ body {
 }
 .hero__wrapper {
   padding: 20px;
-  padding-top: 120px;
   color: #fff;
 }
 .hero__title {
@@ -33,51 +25,8 @@ body {
   line-height: 0.95;
 }
 
-.cards {
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 50px;
-  padding-bottom: 0;
-}
-
-.card {
-  background: #222222;
-  border-radius: 5px;
-  padding: 50px 25px;
-  padding-bottom: 70px;
-}
-.card__image {
-  width: 64px;
-  height: 64px;
-  margin: 0px auto;
-  margin-bottom: 45px;
-}
-.card__image.ventas {
-  background: url("../img/contacto/icon-ventas.svg");
-}
-.card__image.support {
-  background: url("../img/contacto/icon-support.svg");
-}
-.card__image.function {
-  background: url("../img/contacto/icon-function.svg");
-}
-.card__title {
-  font-size: 2.1rem;
-  font-weight: 400;
-  color: #f5f5f7;
-  margin-bottom: 10px;
-}
-.card__copy {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #8e8e90;
-  line-height: 1.4;
-}
-
 .section-contact {
-  margin-top: 100px;
+  margin-top: 70px;
   padding: 0 30px;
 }
 

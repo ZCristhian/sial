@@ -9,16 +9,10 @@ body{
   background: $body-color;
 }
 .main{
-  padding-top: 50px;
+  padding-top: 95px;
   min-height: 100vh;
 }
 // <!-------------- ESTILOS LA SECCION HERO -------------->
-.section-hero{
-  background-blend-mode: overlay;
-  background: url('../img/contacto/background.jpg') center no-repeat, linear-gradient(135deg,#fe7b11 0%,#b80572 100%) !important;
-  background-size: cover;
-  box-shadow: inset 0px -150px 0px $body-color;
-}
 .hero{
   max-width: $width-size;
   margin: 0 auto;
@@ -26,7 +20,6 @@ body{
 
   &__wrapper{
     padding: 20px;
-    padding-top: 120px;
     color: #fff;
   }
   &__title{
@@ -37,54 +30,10 @@ body{
   }
 }
 // <!-------------- ESTILOS DE LAS CARDS -------------->
-.cards{
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 50px;
-  padding-bottom: 0;
-}
-.card{
-  background: rgb(34, 34, 34);
-  border-radius: 5px;
-  padding: 50px 25px;
-  padding-bottom: 70px;
-  // box-shadow: 0px 12px 18px -6px rgba(141, 141, 141, 0.2);
 
-  &__image{
-    width: 64px;
-    height: 64px;
-    margin: 0px auto;
-    margin-bottom: 45px;
-    &.ventas{
-      background: url('../img/contacto/icon-ventas.svg');
-    }
-    &.support{
-      background: url('../img/contacto/icon-support.svg');
-    }
-    &.function{
-      background: url('../img/contacto/icon-function.svg');
-    }
-  }
-
-  &__title{
-    font-size: 2.1rem;
-    font-weight: 400;
-    color: $title-color;
-    margin-bottom: 10px;
-  }
-
-  &__copy{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #8e8e90;
-    line-height: 1.4;
-  }
-}
 // <!-------------- ESTILOS LA SECCION CONTACTO-------------->
 .section-contact{
-  margin-top: 100px;
+  margin-top: 70px;
   padding: 0 $padding-size;
 }
 .contact{
@@ -92,7 +41,6 @@ body{
   margin: 0 auto;
   padding: 20px;
   background: rgb(34, 34, 34);
-  // box-shadow: 0px 12px 18px -6px rgba(34,56,101,0.12);
   border-radius: 15px;
   min-height: 300px;
 
@@ -172,7 +120,6 @@ body{
       background-size: cover;
       &:hover{
         transform: scale(1.1);
-        // filter: grayscale(0);
       }
       &:nth-child(1){
         background: url('../img/footer/icon-facebook.svg');
