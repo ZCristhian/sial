@@ -154,10 +154,16 @@ button {
             content: "";
             position: absolute;
             bottom: 0;
+<<<<<<< HEAD
             background: $body-color;
             width: 10px;
             height: 10px;
             opacity: 0;
+=======
+            transition: all .3s;
+            border-radius: 10px 10px 0 0;
+            z-index: -1;
+>>>>>>> cae044edbf89c9f0afc8d9bcaa139b0d4ea27fb4
         }
 
         &::after {
@@ -168,7 +174,17 @@ button {
             right: 100%;
         }
 
+<<<<<<< HEAD
 
+=======
+        &:hover {
+            @include styleBtn-hover;
+        }
+
+        &:active {
+            @include styleBtn-active;
+        }
+>>>>>>> cae044edbf89c9f0afc8d9bcaa139b0d4ea27fb4
     }
 
 
