@@ -15,6 +15,10 @@ button {
   font-family: inherit;
 }
 
+.body-hidden {
+  overflow: hidden;
+}
+
 .header .main-nav__item--focus::before, .header .main-nav__item--focus::after {
   opacity: 1;
 }
@@ -99,17 +103,14 @@ button {
 .main-nav__item::after {
   left: 100%;
 }
-.main-nav__item::hover::before, .main-nav__item::hover::after {
-  opacity: 0.9;
-}
 .main-nav__link {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #e6e6e6;
+  font-size: 1.6rem;
   border-radius: 15px 15px 0 0;
-  font-size: 16px;
   font-weight: 400;
   position: relative;
   user-select: none;
@@ -264,8 +265,11 @@ button {
   }
   .main-nav__item::before, .main-nav__item::after {
     right: 0;
+    width: 50px;
+    height: 50px;
   }
   .main-nav__item::after {
+    left: initial;
     top: 100%;
   }
   .main-nav__item::before {
@@ -274,7 +278,7 @@ button {
   .main-nav__link {
     width: 100%;
     font-size: 1.7rem;
-    border-radius: 15px 0 0 15px;
+    border-radius: 25px 0 0 25px;
     justify-content: center;
   }
   .main-nav__link--large {
@@ -282,12 +286,20 @@ button {
   }
   .main-nav__link::before, .main-nav__link::after {
     right: 0;
+    width: 25px;
+    height: 25px;
   }
   .main-nav__link::after {
     top: 100%;
+    left: initial;
   }
   .main-nav__link::before {
     bottom: 100%;
+  }
+
+  .main-nav__item:hover .productos__list {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .mobile-menu {
@@ -316,6 +328,11 @@ button {
   }
   .mobile-menu .line-top {
     margin-top: -1.2rem;
+  }
+
+  [class=main-nav__item]:hover .main-nav__link {
+    z-index: 3;
+    background: initial;
   }
 }
 

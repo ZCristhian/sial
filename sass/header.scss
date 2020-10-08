@@ -18,7 +18,9 @@ a {
 button {
     font-family: inherit;
 }
-
+.body-hidden{
+    overflow: hidden;
+}
 .header {
     .main-nav__item--focus {
 
@@ -40,7 +42,7 @@ button {
 }
 
 [class="main-nav__item"] {
-    &:hover .main-nav__link{
+    &:hover .main-nav__link {
         z-index: 3;
         background: $hover-nav;
     }
@@ -126,13 +128,6 @@ button {
             left: 100%;
         }
 
-        &::hover {
-
-            &::before,
-            &::after {
-                opacity: 0.9;
-            }
-        }
     }
 
     &__link {
@@ -141,8 +136,8 @@ button {
         justify-content: center;
         align-items: center;
         color: rgb(230, 230, 230);
+        font-size: 1.6rem;
         border-radius: 15px 15px 0 0;
-        font-size: 16px;
         font-weight: 400;
         position: relative;
         user-select: none;
@@ -193,12 +188,14 @@ button {
         transition: all 0.05s;
         visibility: hidden;
     }
-    &__item{
-        &:hover .productos__link{
+
+    &__item {
+        &:hover .productos__link {
             transition: all .15s;
             background: $header-color;
         }
     }
+
     &__link {
         padding: 10px 20px;
         font-size: 1.5rem;
@@ -261,7 +258,6 @@ button {
         }
 
         &.active {
-            // background: $header-color;
 
             .main-nav {
                 position: relative;
@@ -354,21 +350,26 @@ button {
             &::before,
             &::after {
                 right: 0;
+                width: 50px;
+                height: 50px;
             }
 
             &::after {
+                left: initial;
                 top: 100%;
+
             }
 
             &::before {
                 bottom: 100%;
+
             }
         }
 
         &__link {
             width: 100%;
             font-size: 1.7rem;
-            border-radius: 15px 0 0 15px;
+            border-radius: 25px 0 0 25px;
             justify-content: center;
 
             &--large {
@@ -378,16 +379,24 @@ button {
             &::before,
             &::after {
                 right: 0;
+                width: 25px;
+                height: 25px;
             }
 
             &::after {
                 top: 100%;
+                left: initial;
             }
 
             &::before {
                 bottom: 100%;
             }
         }
+    }
+
+    .main-nav__item:hover .productos__list {
+        opacity: 0;
+        visibility: hidden;
     }
 
     .mobile-menu {
@@ -419,6 +428,12 @@ button {
             &-top {
                 margin-top: -1.2rem;
             }
+        }
+    }
+    [class="main-nav__item"] {
+        &:hover .main-nav__link {
+            z-index: 3;
+            background: initial;
         }
     }
 }

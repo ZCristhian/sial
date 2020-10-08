@@ -38,12 +38,12 @@
   background: linear-gradient(90deg, #fe7b11, #fe0e95);
   border-radius: 3rem;
   border: none;
-  height: 3.8rem;
-  width: 17rem;
+  height: 4rem;
+  width: 19rem;
   cursor: pointer;
   transition: all 300ms;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   user-select: none;
 }
 .hero__btn:hover {
@@ -206,10 +206,6 @@
   .hero,
 .why {
     padding: 0 15px;
-  }
-
-  .hero__copy {
-    font-size: 17px;
   }
 
   .section-why {
