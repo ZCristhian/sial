@@ -26,10 +26,9 @@ button {
   opacity: 1;
 }
 
-[class=main-nav__link]:hover {
+[class=main-nav__item]:hover .main-nav__link {
   z-index: 3;
-  background: #830730;
-  opacity: 0.9;
+  background: #a7063c;
 }
 
 /* ESTILOS PARA RESETEAR EL DE LOS NAVEGADORES */
@@ -115,6 +114,7 @@ button {
   position: relative;
   user-select: none;
   padding: 0px 20px 0;
+  position: relative;
 }
 .main-nav__link::after, .main-nav__link::before {
   content: "";
@@ -130,6 +130,39 @@ button {
 }
 .main-nav__link::before {
   right: 100%;
+}
+
+.main-nav__item:hover .productos__list {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s;
+  visibility: visible;
+}
+
+.productos__list {
+  flex-direction: column;
+  position: absolute;
+  width: auto;
+  top: 100%;
+  background: #a7063c;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  opacity: 0;
+  transform: translateY(-30px);
+  overflow: hidden;
+  transition: all 0.05s;
+  visibility: hidden;
+}
+.productos__item:hover .productos__link {
+  transition: all 0.15s;
+  background: #D5003B;
+}
+.productos__link {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: #e6e6e6;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1080px) {

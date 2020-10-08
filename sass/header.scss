@@ -39,11 +39,10 @@ button {
     }
 }
 
-[class="main-nav__link"] {
-    &:hover {
+[class="main-nav__item"] {
+    &:hover .main-nav__link{
         z-index: 3;
-        background: rgb(131, 7, 48);
-        opacity: 0.9;
+        background: $hover-nav;
     }
 }
 
@@ -148,22 +147,17 @@ button {
         position: relative;
         user-select: none;
         padding: 0px 20px 0;
+        position: relative;
 
         &::after,
         &::before {
             content: "";
             position: absolute;
             bottom: 0;
-<<<<<<< HEAD
             background: $body-color;
             width: 10px;
             height: 10px;
             opacity: 0;
-=======
-            transition: all .3s;
-            border-radius: 10px 10px 0 0;
-            z-index: -1;
->>>>>>> cae044edbf89c9f0afc8d9bcaa139b0d4ea27fb4
         }
 
         &::after {
@@ -173,21 +167,44 @@ button {
         &::before {
             right: 100%;
         }
-
-<<<<<<< HEAD
-
-=======
-        &:hover {
-            @include styleBtn-hover;
-        }
-
-        &:active {
-            @include styleBtn-active;
-        }
->>>>>>> cae044edbf89c9f0afc8d9bcaa139b0d4ea27fb4
     }
+}
 
+.main-nav__item:hover .productos__list {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .2s;
+    visibility: visible;
+}
 
+.productos {
+    &__list {
+        flex-direction: column;
+        position: absolute;
+        width: auto;
+        top: 100%;
+        background: $hover-nav;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        opacity: 0;
+        transform: translateY(-30px);
+        overflow: hidden;
+        transition: all 0.05s;
+        visibility: hidden;
+    }
+    &__item{
+        &:hover .productos__link{
+            transition: all .15s;
+            background: $header-color;
+        }
+    }
+    &__link {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        color: rgb(230, 230, 230);
+        white-space: nowrap;
+    }
 }
 
 

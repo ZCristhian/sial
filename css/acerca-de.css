@@ -1,7 +1,7 @@
 @import url("header.css");
 @import url("footer.css");
 .main {
-  padding-top: 175px;
+  padding-top: 135px;
 }
 
 .about-hero {
@@ -42,7 +42,7 @@
 }
 
 .section-modules {
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 .container-modules {
@@ -125,7 +125,7 @@
   text-align: center;
   color: #f5f5f7;
   line-height: 1;
-  height: 80px;
+  height: 70px;
 }
 .modules::-webkit-scrollbar {
   display: none;
