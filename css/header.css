@@ -70,10 +70,15 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.main-nav__container-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main-nav__logo {
-  width: 9.5rem;
+  width: 4.5rem;
+  height: auto;
   user-select: none;
-  filter: drop-shadow(2px 4px 4px #3f0012);
 }
 .main-nav__list {
   height: 100%;
