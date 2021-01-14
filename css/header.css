@@ -176,9 +176,6 @@ button {
     max-width: 100rem;
     padding: 0 20px;
   }
-  .main-nav__logo {
-    width: 10rem;
-  }
 }
 @media screen and (max-width: 767px) {
   .header {
